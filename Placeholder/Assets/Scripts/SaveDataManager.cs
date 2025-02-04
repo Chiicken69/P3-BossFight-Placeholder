@@ -5,10 +5,12 @@ using System.IO;
 public class SaveDataManager : MonoBehaviour
 {
     [Header("Save data information")]
-    [SerializeField] private string saveFileName = @"";
+    [SerializeField] private string permSaveFileName = @"";
+    [SerializeField] private string quickSaveFileName = @"";
 
     private string saveFolderPath = @"";
-    private string fullSavePath = @"";
+    private string permFullSavePath = @"";
+    private string quickFullSavePath = @"";
     public SaveData saveDataObject;
 
     [Header("References")]
@@ -21,10 +23,20 @@ public class SaveDataManager : MonoBehaviour
     {
         saveDataObject = new SaveData();
         saveFolderPath = Application.persistentDataPath;
-        fullSavePath = Path.Combine(saveFolderPath, saveFileName);
-        Debug.Log("Full save data path: " + fullSavePath);
+       
+        //Long term saves, between sessions
+        permFullSavePath = Path.Combine(saveFolderPath, permSaveFileName);
+        Debug.Log("Full save data path: " + permFullSavePath);
 
-        LoadSaveDataFromFile(fullSavePath);
+        //Short term saves, for quick-respawn after dying to a boss
+        quickFullSavePath = Path.Combine(saveFolderPath, quickSaveFileName);
+        Debug.Log("Quick respawn data path: " + quickFullSavePath);
+
+        //Load correct save file
+        //There is a difference between if a player just died / is reloading from a save between sessions.
+
+
+        LoadSaveDataFromFile(permFullSavePath);
         Debug.Log("Loaded save data from file / created new file.");
 
     }
@@ -101,9 +113,14 @@ public class SaveDataManager : MonoBehaviour
     /// <summary>
     /// Function to save data from other scripts
     /// </summary>
-    public void SaveDataToFile()
+    public void SaveDataToPermFile()
     {
-        SaveDataToFile(fullSavePath);
+        SaveDataToFile(permFullSavePath);
+    }
+
+    public void SaveDataToQuickFile()
+    {
+        SaveDataToFile(quickFullSavePath);
     }
 
     //Saves save data to file at savePath.
@@ -137,10 +154,34 @@ public class SaveDataManager : MonoBehaviour
 
     }
 
+    public void DeleteQuickSave()
+    {
+        if (File.Exists(quickFullSavePath))
+        {
+            try
+            {
+                File.Delete(quickFullSavePath);
+                Debug.Log("Deleted quick-save");
+            }
+            catch (IOException e)
+            {
+                Debug.Log("IOException when deleting quick-save: " + e);
+            }
+        }
+        else
+        {
+            Debug.Log("Quick-save file was not found when attempting to delete");
+        }
+
+
+    }
+
+
     private void OnApplicationQuit()
     {
         //Gem og luk save data fil korrekt.
-        SaveDataToFile(fullSavePath);
+        SaveDataToFile(permFullSavePath);
+        DeleteQuickSave();
     }
 
 }
