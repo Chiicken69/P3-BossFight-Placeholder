@@ -19,9 +19,21 @@ public class SaveDataManager : MonoBehaviour
 
     private PlayerAttack PlayerAttackScript;
 
+    private static SaveDataManager staticSDM;
+
 
     void Awake()
     {
+        //Only one save data manager
+        if(staticSDM == null)
+        {
+            staticSDM = this;
+        } else
+        {
+            Destroy(this.gameObject);
+        }
+
+
         saveDataObject = new SaveData();
         saveFolderPath = Application.persistentDataPath;
        
@@ -94,6 +106,8 @@ public class SaveDataManager : MonoBehaviour
 
     private void LoadSaveDataFromFile(string savePath)
     {
+        UpdatePlayerData();
+
         if (!File.Exists(savePath))
         {
             Debug.Log("Highscore save data file doesnt exist, attempting creation.");
@@ -180,7 +194,10 @@ public class SaveDataManager : MonoBehaviour
             Debug.Log("Quick-save file was not found when attempting to delete");
         }
 
-
+    }
+    private void UpdatePlayerData()
+    {
+        //Update actual information in save data object.
     }
 
 
