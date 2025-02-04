@@ -7,41 +7,46 @@ public class PlayerAttack : MonoBehaviour
 {
 
     // private float attackDamage = 10;
-    private float bulletSpeed = 10;
+    private float _bulletSpeed = 10;
     // private float attackTime = 5;
     public GameObject bulletPrefab;
-    private GameObject player;
-    private GameObject fired_bullet;
-    public float game_z = 8;
-
-
-
+    private GameObject _player;
+    private GameObject _firedBullet;
+    public float gameZ = 8;
+    
     void Start()
     {
-        player = GameObject.Find("Player");
- 
+        _player = this.gameObject;
+    }
+    void Update()
+    {
+      FireShot();  
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void FireShot()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 playerPos = transform.position;
-            Vector2 shot = screenPos - playerPos;
-
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
+          Vector2 shot = CalculateShot();
+          RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
             if (hit.collider != null)
             {
                 Debug.Log(hit.collider.name);
             }
-
             Debug.DrawRay(transform.position, shot, Color.red);
         }
     }
 
+    private Vector2 CalculateShot()
+    {
+        Vector2 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = transform.position;
+        Vector2 shot = screenPos - playerPos;
+        return shot;
+    }
+    
+    
+    
 
     /*
     void Update()
