@@ -17,6 +17,7 @@ public class SaveDataManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private int sceneIndex;
 
+    private PlayerAttack PlayerAttackScript;
 
 
     void Awake()
@@ -39,6 +40,12 @@ public class SaveDataManager : MonoBehaviour
         LoadSaveDataFromFile(permFullSavePath);
         Debug.Log("Loaded save data from file / created new file.");
 
+    }
+
+    private void Start()
+    {
+        PlayerAttackScript = player.GetComponent<PlayerAttack>();
+        
     }
 
 
