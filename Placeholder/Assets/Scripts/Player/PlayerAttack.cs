@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
@@ -7,16 +8,20 @@ public class PlayerAttack : MonoBehaviour
 {
 
     // private float attackDamage = 10;
-    private float _bulletSpeed = 10;
+    // private float _bulletSpeed = 10;
     // private float attackTime = 5;
-    public GameObject bulletPrefab;
+    //public GameObject bulletPrefab;
     private GameObject _player;
     private GameObject _firedBullet;
-    public float gameZ = 8;
+    public float gunDuration =0.08f;
+
+    LineRenderer gunLine;
     
     void Start()
     {
         _player = this.gameObject;
+        gunLine = GetComponent<LineRenderer>();
+        gunLine.SetWidth(0.2f, 0.2f);
     }
     void Update()
     {
@@ -29,11 +34,21 @@ public class PlayerAttack : MonoBehaviour
         {
           Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
+            gunLine.SetPosition(0, transform.position);
             if (hit.collider != null)
             {
+                gunLine.SetPosition(1, hit.point);
                 Debug.Log(hit.collider.name);
+
+            } else
+            {
+                //gunLine.SetPosition(1, +);
+                Debug.DrawRay(transform.position, shot, Color.red);
             }
-            Debug.DrawRay(transform.position, shot, Color.red);
+            StartCoroutine(ShootGun());
+
+
+
         }
     }
 
@@ -44,8 +59,14 @@ public class PlayerAttack : MonoBehaviour
         Vector2 shot = screenPos - playerPos;
         return shot;
     }
-    
-    
+
+    IEnumerator ShootGun()
+    {
+        gunLine.enabled = true;
+        yield return new WaitForSeconds(gunDuration);
+        gunLine.enabled = false;
+
+    }
     
 
     /*
