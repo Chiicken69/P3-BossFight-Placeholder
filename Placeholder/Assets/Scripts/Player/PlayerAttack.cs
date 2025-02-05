@@ -63,7 +63,7 @@ public class PlayerAttack : MonoBehaviour
                 Debug.DrawRay(transform.position, shot, Color.red);
             }
             StartCoroutine(ShootGun());
-            --currentAmmoLoaded;
+            --_currentAmmoLoaded;
             _timer = _resetTimer;
             Debug.Log(_currentAmmoLoaded);
 
