@@ -26,10 +26,16 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     float _resetTimer = 0.35f;
 
+    [SerializeField]
+    float _reloadTimer = 2f;
+
+
     private int _currentAmmoLoaded;
     private int _maxAmmoCapacity = 6;
 
     private Animator animator;
+
+    bool _Reloading = false;
 
     void Start()
     {
@@ -52,10 +58,15 @@ public class PlayerAttack : MonoBehaviour
     //it wont shoot out a ray if there is no collider to hit.
     private void FireShot()
     {
-
-        if (Input.GetMouseButtonDown(0) && _timer < 0 && _currentAmmoLoaded > 0)
+        //when you run out of bullets it reloads automatically
+        if (_currentAmmoLoaded == 0 && _Reloading == false)
         {
-          Vector2 shot = CalculateShot();
+            StartCoroutine(ReloadTimer());
+        }
+        // if left click go boom
+        if (Input.GetMouseButtonDown(0) && _timer < 0 && _currentAmmoLoaded > 0 && _Reloading == false)
+        {
+            Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
             gunLine.SetPosition(0, transform.position);
             if (hit.collider != null)
@@ -78,24 +89,29 @@ public class PlayerAttack : MonoBehaviour
     }
  
 
-
+    // if press then reload and run timer
     private void Reload()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && _Reloading == false)
         {
-            int _reloadAmount = _maxAmmoCapacity - _currentAmmoLoaded; //check how much need to reload
-
-            // if reload geather than or equal to 0 bullets then return reload amount otherwise return currentammo
-            _reloadAmount = (_currentAmmoLoaded + _reloadAmount) >= 0 ? _reloadAmount : _currentAmmoLoaded; 
-            _currentAmmoLoaded += _reloadAmount;
-
+            StartCoroutine(ReloadTimer());
         }
     }
-    private void AmmoUI(int currentAmmo)
+    IEnumerator ReloadTimer()
     {
+        _Reloading = true;
+        yield return new WaitForSeconds(_reloadTimer);
+        int _reloadAmount = _maxAmmoCapacity - _currentAmmoLoaded; //check how much need to reload
 
+        // if reload geather than or equal to 0 bullets then return reload amount otherwise return currentammo
+        _reloadAmount = (_currentAmmoLoaded + _reloadAmount) >= 0 ? _reloadAmount : _currentAmmoLoaded;
+        _currentAmmoLoaded += _reloadAmount;
+        _Reloading = false;
+    }
 
-        animator.SetInteger("AmmoCount", currentAmmo);
+    private void AmmoUI(int _currentAmmo)
+    {
+        animator.SetInteger("AmmoCount", _currentAmmo);
     }
 
     private Vector2 CalculateShot()
@@ -112,34 +128,5 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(_gunDuration);
         gunLine.enabled = false;
     }
-    
-
-    /*
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            cloneBullet = Instantiate(bullet, player.transform);
-            directionToShoot = cloneBullet.transform.forward - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            cloneBullet.transform.Translate(directionToShoot * bulletSpeed * Time.deltaTime);
-        }
-
-
-    }
-
-
-        Vector2 screen_mouse_pos = Input.mousePosition;
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(screen_mouse_pos.x, screen_mouse_pos.y, game_z));
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject fired_bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-
-            Vector3 bullet_direction = new Vector3(mousePos.x, mousePos.y, game_z) - transform.position;
-            fired_bullet.transform.Translate(bullet_direction * bulletSpeed * Time.deltaTime);
-
-            Destroy(fired_bullet,1f);
-        }
-    */
 
 }

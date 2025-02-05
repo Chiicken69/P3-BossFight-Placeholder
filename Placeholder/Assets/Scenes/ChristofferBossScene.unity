@@ -519,6 +519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timer: 0.35
   _resetTimer: 0.35
+  _reloadTimer: 2
+  _resetReloadTimer: 2
 --- !u!120 &1318163815
 LineRenderer:
   serializedVersion: 2
