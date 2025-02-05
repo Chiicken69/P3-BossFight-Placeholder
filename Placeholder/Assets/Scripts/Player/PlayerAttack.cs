@@ -13,9 +13,15 @@ public class PlayerAttack : MonoBehaviour
     //public GameObject bulletPrefab;
     private GameObject _player;
     private GameObject _firedBullet;
-    public float gunDuration =0.08f;
+    float _gunDuration =0.08f;
 
     LineRenderer gunLine;
+
+    [SerializeField]
+    float _timer = 1;
+
+    [SerializeField]
+    float _resetTimer = 1;
     
     void Start()
     {
@@ -26,11 +32,12 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
       FireShot();  
+      _timer -= Time.deltaTime;
     }
 
     private void FireShot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _timer < 0)
         {
           Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
@@ -46,6 +53,8 @@ public class PlayerAttack : MonoBehaviour
                 Debug.DrawRay(transform.position, shot, Color.red);
             }
             StartCoroutine(ShootGun());
+
+            _timer = _resetTimer;
 
 
 
@@ -63,9 +72,8 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator ShootGun()
     {
         gunLine.enabled = true;
-        yield return new WaitForSeconds(gunDuration);
+        yield return new WaitForSeconds(_gunDuration);
         gunLine.enabled = false;
-
     }
     
 
