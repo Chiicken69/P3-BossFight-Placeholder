@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -13,24 +14,28 @@ public class PlayerAttack : MonoBehaviour
     //public GameObject bulletPrefab;
     private GameObject _player;
     private GameObject _firedBullet;
+    private GameObject uiAmmo;
 
     float _gunDuration =0.08f;
-
-    private int _remainingBullets;
 
     LineRenderer gunLine;
 
     [SerializeField]
-    float _timer = 0.5f;
+    float _timer = 0.35f;
 
     [SerializeField]
-    float _resetTimer = 0.5f;
+    float _resetTimer = 0.35f;
 
     private int _currentAmmoLoaded;
     private int _maxAmmoCapacity = 6;
 
+    private Animator animator;
+
     void Start()
     {
+
+        uiAmmo = GameObject.Find("UI Ammo");
+        animator = uiAmmo.GetComponent<Animator>();
         _player = this.gameObject;
         gunLine = GetComponent<LineRenderer>();
         gunLine.SetWidth(0.2f, 0.2f);
@@ -39,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
     {
       FireShot();
         Reload();
+        AmmoUI(_currentAmmoLoaded);
       _timer -= Time.deltaTime;
     }
 
@@ -82,7 +88,14 @@ public class PlayerAttack : MonoBehaviour
             // if reload geather than or equal to 0 bullets then return reload amount otherwise return currentammo
             _reloadAmount = (_currentAmmoLoaded + _reloadAmount) >= 0 ? _reloadAmount : _currentAmmoLoaded; 
             _currentAmmoLoaded += _reloadAmount;
+
         }
+    }
+    private void AmmoUI(int currentAmmo)
+    {
+
+
+        animator.SetInteger("AmmoCount", currentAmmo);
     }
 
     private Vector2 CalculateShot()
