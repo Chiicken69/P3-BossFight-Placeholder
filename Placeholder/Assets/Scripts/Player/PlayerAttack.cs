@@ -15,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
     private GameObject _player;
     private GameObject _firedBullet;
     private GameObject uiAmmo;
+    [SerializeField]
+    private GameObject reloadingText;
 
     float _gunDuration =0.08f;
 
@@ -99,6 +101,7 @@ public class PlayerAttack : MonoBehaviour
     }
     IEnumerator ReloadTimer()
     {
+        reloadingText.SetActive(true);
         _Reloading = true;
         yield return new WaitForSeconds(_reloadTimer);
         int _reloadAmount = _maxAmmoCapacity - _currentAmmoLoaded; //check how much need to reload
@@ -107,6 +110,7 @@ public class PlayerAttack : MonoBehaviour
         _reloadAmount = (_currentAmmoLoaded + _reloadAmount) >= 0 ? _reloadAmount : _currentAmmoLoaded;
         _currentAmmoLoaded += _reloadAmount;
         _Reloading = false;
+        reloadingText.SetActive(false);
     }
 
     private void AmmoUI(int _currentAmmo)
