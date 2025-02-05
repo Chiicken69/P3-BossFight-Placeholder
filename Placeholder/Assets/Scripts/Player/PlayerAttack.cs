@@ -26,8 +26,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     float _resetTimer = 0.5f;
 
-    private int currentAmmoLoaded;
-    private int maxAmmoCapacity = 6;
+    private int _currentAmmoLoaded;
+    private int _maxAmmoCapacity = 6;
 
     void Start()
     {
@@ -46,8 +46,8 @@ public class PlayerAttack : MonoBehaviour
     //it wont shoot out a ray if there is no collider to hit.
     private void FireShot()
     {
-        Debug.Log(currentAmmoLoaded);
-        if (Input.GetMouseButtonDown(0) && _timer < 0 && currentAmmoLoaded > 0)
+
+        if (Input.GetMouseButtonDown(0) && _timer < 0 && _currentAmmoLoaded > 0)
         {
           Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
@@ -65,7 +65,7 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(ShootGun());
             --currentAmmoLoaded;
             _timer = _resetTimer;
-
+            Debug.Log(_currentAmmoLoaded);
 
 
         }
@@ -77,9 +77,11 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            int reloadAmount = maxAmmoCapacity - currentAmmoLoaded;
-            reloadAmount = (currentAmmoLoaded + reloadAmount) >= 0 ? reloadAmount : currentAmmoLoaded;
-            currentAmmoLoaded += reloadAmount;
+            int _reloadAmount = _maxAmmoCapacity - _currentAmmoLoaded; //check how much need to reload
+
+            // if reload geather than or equal to 0 bullets then return reload amount otherwise return currentammo
+            _reloadAmount = (_currentAmmoLoaded + _reloadAmount) >= 0 ? _reloadAmount : _currentAmmoLoaded; 
+            _currentAmmoLoaded += _reloadAmount;
         }
     }
 
