@@ -7,21 +7,38 @@ public class HealthSystem : MonoBehaviour
     
    [SerializeField] private int _currentHealth;
    [SerializeField] private int _maxHealth;
+   
+   private PlayerMovement _playerMovement;
 
 
     private void Awake()
     {
         InitializeHealth(_maxHealth);
+        _playerMovement = this.gameObject.GetComponent<PlayerMovement>();
+    }
+
+    private void Update()
+    {
+        
     }
 
 
     public void TakeDamage(int DamageToTake)
     {
-        _currentHealth -= DamageToTake;
+        if (!_playerMovement.isInvincible)
+        {
+            _currentHealth -= DamageToTake;    
+        }
+        else
+        {
+            Debug.Log("Player is invincible");
+        }
+        
     }
 
     public void GainHealth(int HealthToGain)
     {
+      
         int diff = HealthToGain + _currentHealth;
 
 

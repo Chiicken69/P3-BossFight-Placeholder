@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Cooldowns and timings")]
 
     [SerializeField] private float _dashCooldownTime;
-    [SerializeField] private uint _invincibleFramesCount;
+    public bool isInvincible;
+    [SerializeField] private uint _invincibleSeconds;
 
 
     [Header("Misc")]
@@ -22,10 +23,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _baseMoveDir;
     private float DashInput;
     private Rigidbody2D _rb;
+   
+   
 
-    // Timers
 
+
+   // Timers
+   [SerializeField] private float _invincibleTimer;
     [SerializeField] private float _dashTimer;
+   
 
 
     private void Awake()
@@ -50,16 +56,13 @@ public class PlayerMovement : MonoBehaviour
     private void UpdatePlayerPos()
     {
         Vector2 _baseMoveDir = new Vector2(_xInput, _yInput);
-        print("base mve dir" + _baseMoveDir);
+        print("base move dir" + _baseMoveDir);
         _baseMoveDir.Normalize();
         Vector2 _moveDir = _baseMoveDir;
         _moveDir *= _baseMoveSpeed;
-
-       
-        _rb.AddForce(_moveDir);
-       
         
-
+        _rb.AddForce(_moveDir);
+        
         if (DashInput > 0 && _dashTimer < 0)
         {
             PlayerDash(_moveDir);
@@ -69,12 +72,25 @@ public class PlayerMovement : MonoBehaviour
     }
     private void PlayerDash(Vector2 baseMoveDir)
     {
+        
+        isInvincible = true;
         _rb.AddForce(baseMoveDir * _moveDashSpeed, ForceMode2D.Impulse);
+        
     }
 
     private void RunTimers()
     {
         _dashTimer -= Time.deltaTime;
+        if (isInvincible)
+        {
+            _invincibleTimer += Time.deltaTime;
+        }
+        if (_invincibleTimer >= _invincibleSeconds)
+        {
+            isInvincible = false;
+            _invincibleTimer = _invincibleSeconds;
+        }
+       
     }
 
 
