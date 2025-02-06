@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 1221262270}
   - component: {fileID: 1221262272}
   m_Layer: 0
-  m_Name: old
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,7 +701,8 @@ MonoBehaviour:
   _resetTimer: 0.25
   _reloadTimer: 2
   _partikalObject: {fileID: 5721940541320000196, guid: a5e26518d0cc12e4084d6566abb9fbda, type: 3}
-  _hitWallPartikalObject: {fileID: 0}
+  _hitWallPartikalObject: {fileID: 7496593291163084576, guid: f282492a5a9e3174985a6b1bf333d177, type: 3}
+  startColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!120 &1318163815
 LineRenderer:
   serializedVersion: 2
@@ -772,7 +773,7 @@ LineRenderer:
       serializedVersion: 2
       key0: {r: 0.4056604, g: 0.39609292, b: 0.39609292, a: 0.8627451}
       key1: {r: 0.4056604, g: 0.39609292, b: 0.39609292, a: 0.8627451}
-      key2: {r: 1, g: 1, b: 1, a: 0}
+      key2: {r: 1, g: 1, b: 1, a: 0.8627451}
       key3: {r: 1, g: 1, b: 1, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -788,7 +789,7 @@ LineRenderer:
       ctime7: 0
       atime0: 0
       atime1: 65535
-      atime2: 0
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0

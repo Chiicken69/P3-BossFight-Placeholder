@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -44,6 +45,7 @@ public class PlayerAttack : MonoBehaviour
 
     bool _Reloading = false;
 
+    public UnityEngine.Color lineColor = UnityEngine.Color.gray;
     void Start()
     {
 
@@ -76,22 +78,36 @@ public class PlayerAttack : MonoBehaviour
             Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
             gunLine.SetPosition(0, transform.position);
+            gunLine.startColor = new UnityEngine.Color(0.5f, 0.5f, 0.5f, 0.7f);;
             if (hit.collider != null)
             {
+                var main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
+                main.startColor = new UnityEngine.Color(255, 255, 255, 255);
+
+                if (hit.collider.name == "Boss")
+                {
+                    main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
+                    main.startColor = new UnityEngine.Color(111111, 0, 0, 0);
+                }
+
                 gunLine.SetPosition(1, hit.point);
                 Debug.Log(hit.collider.name);
-                //GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, hit.point, Quaternion.identity); //make hit effet red?
+                GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, hit.point, Quaternion.identity); //make hit effet red?
+
+                Destroy(tempHitParticlObject, 1);
 
             } else
             {
                 //gunLine.SetPosition(1, +);
-                Debug.DrawRay(transform.position, shot, Color.red);
-               //GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, shot, Quaternion.identity);
+                Debug.DrawRay(transform.position, shot, UnityEngine.Color.red);
             }
             float angle = Mathf.Atan2(shot.y, shot.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.Euler(0, 0, angle);
             GameObject tempParticlObject = Instantiate(_partikalObject, transform.position, rotation);
+
+            Destroy(tempParticlObject, 1);
   
+
 
             //tempParticlObject.GetComponent<ParticleSystem>().Play();
             StartCoroutine(ShootGun());
@@ -103,22 +119,6 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    /*
-                  if (hit.collider != null)
-            {
-                gunLine.SetPosition(1, hit.point);
-                Debug.Log(hit.collider.name);
-                GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, hit.point, Quaternion.identity); //make hit effet red?
-
-            } else
-            {
-                //gunLine.SetPosition(1, +);
-                Debug.DrawRay(transform.position, shot, Color.red);
-                GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, shot, Quaternion.identity);
-            }
-    */
-
-
 
     // if press then reload and run timer
     private void Reload()
@@ -127,6 +127,20 @@ public class PlayerAttack : MonoBehaviour
         {
             StartCoroutine(ReloadTimer());
         }
+    }
+    
+
+    private void AmmoUI(int _currentAmmo)
+    {
+        animator.SetInteger("AmmoCount", _currentAmmo);
+    }
+
+    private Vector2 CalculateShot()
+    {
+        Vector2 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = transform.position;
+        Vector2 shot = screenPos - playerPos;
+        return shot;
     }
     IEnumerator ReloadTimer()
     {
@@ -141,20 +155,6 @@ public class PlayerAttack : MonoBehaviour
         _Reloading = false;
         reloadingText.SetActive(false);
     }
-
-    private void AmmoUI(int _currentAmmo)
-    {
-        animator.SetInteger("AmmoCount", _currentAmmo);
-    }
-
-    private Vector2 CalculateShot()
-    {
-        Vector2 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 playerPos = transform.position;
-        Vector2 shot = screenPos - playerPos;
-        return shot;
-    }
-
     IEnumerator ShootGun()
     {
         gunLine.enabled = true;
