@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
 
 
     [SerializeField] private GameObject _partikalObject;
-
+    [SerializeField] private GameObject _hitWallPartikalObject;
 
     private int _currentAmmoLoaded;
     private int _maxAmmoCapacity = 6;
@@ -80,15 +80,19 @@ public class PlayerAttack : MonoBehaviour
             {
                 gunLine.SetPosition(1, hit.point);
                 Debug.Log(hit.collider.name);
+                //GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, hit.point, Quaternion.identity); //make hit effet red?
 
             } else
             {
                 //gunLine.SetPosition(1, +);
                 Debug.DrawRay(transform.position, shot, Color.red);
+               //GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, shot, Quaternion.identity);
             }
             float angle = Mathf.Atan2(shot.y, shot.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.Euler(0, 0, angle);
             GameObject tempParticlObject = Instantiate(_partikalObject, transform.position, rotation);
+  
+
             //tempParticlObject.GetComponent<ParticleSystem>().Play();
             StartCoroutine(ShootGun());
             --_currentAmmoLoaded;
@@ -99,6 +103,20 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    /*
+                  if (hit.collider != null)
+            {
+                gunLine.SetPosition(1, hit.point);
+                Debug.Log(hit.collider.name);
+                GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, hit.point, Quaternion.identity); //make hit effet red?
+
+            } else
+            {
+                //gunLine.SetPosition(1, +);
+                Debug.DrawRay(transform.position, shot, Color.red);
+                GameObject tempHitParticlObject = Instantiate(_hitWallPartikalObject, shot, Quaternion.identity);
+            }
+    */
 
 
 
