@@ -696,9 +696,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadingText: {fileID: 1025538058}
-  _timer: 0.35
-  _resetTimer: 0.35
+  _gunDuration: 0.03
+  _timer: 0.25
+  _resetTimer: 0.25
   _reloadTimer: 2
+  _partikalObject: {fileID: 5721940541320000196, guid: a5e26518d0cc12e4084d6566abb9fbda, type: 3}
 --- !u!120 &1318163815
 LineRenderer:
   serializedVersion: 2

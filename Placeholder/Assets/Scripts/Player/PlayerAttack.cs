@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
@@ -18,18 +19,22 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private GameObject reloadingText;
 
-    float _gunDuration =0.08f;
+    [SerializeField]
+    float _gunDuration =0.03f;
 
     LineRenderer gunLine;
 
     [SerializeField]
-    float _timer = 0.35f;
+    float _timer = 0.25f;
 
     [SerializeField]
-    float _resetTimer = 0.35f;
+    float _resetTimer = 0.25f;
 
     [SerializeField]
     float _reloadTimer = 2f;
+
+
+    [SerializeField] private GameObject _partikalObject;
 
 
     private int _currentAmmoLoaded;
@@ -81,6 +86,10 @@ public class PlayerAttack : MonoBehaviour
                 //gunLine.SetPosition(1, +);
                 Debug.DrawRay(transform.position, shot, Color.red);
             }
+            float angle = Mathf.Atan2(shot.y, shot.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.Euler(0, 0, angle);
+            GameObject tempParticlObject = Instantiate(_partikalObject, transform.position, rotation);
+            //tempParticlObject.GetComponent<ParticleSystem>().Play();
             StartCoroutine(ShootGun());
             --_currentAmmoLoaded;
             _timer = _resetTimer;
@@ -89,7 +98,9 @@ public class PlayerAttack : MonoBehaviour
 
         }
     }
- 
+
+
+
 
     // if press then reload and run timer
     private void Reload()
@@ -129,6 +140,7 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator ShootGun()
     {
         gunLine.enabled = true;
+     
         yield return new WaitForSeconds(_gunDuration);
         gunLine.enabled = false;
     }
