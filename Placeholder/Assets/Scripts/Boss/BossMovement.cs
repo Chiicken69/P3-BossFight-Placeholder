@@ -7,6 +7,7 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private GameObject[] _phaseOne;
     [SerializeField] private GameObject[] _phaseTwo;
     [SerializeField] private GameObject[] _phaseThree;
+    [SerializeField] private GameObject[] _phaseFour;
 
     private Animator _animator;
     private float _phaseLength;
@@ -36,6 +37,7 @@ public class BossMovement : MonoBehaviour
 
                 if (!stateInfo.IsName("BossPhaseOne"))
                 {
+                    _bossImage.transform.rotation = Quaternion.Euler(0, 0, -180);
                     transform.rotation = Quaternion.Euler(0, 0, -180);
                     transform.position = _phaseOne[Random.Range(0, _phaseOne.Length)].transform.position;
                     _animator.Play("BossPhaseOne");
@@ -81,6 +83,7 @@ public class BossMovement : MonoBehaviour
 
                 if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("BossPhaseOne"))
                 {
+                    _bossImage.transform.rotation = Quaternion.Euler(0, 0, 0);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     transform.position = _phaseThree[Random.Range(0, _phaseThree.Length)].transform.position;
                     _animator.Play("BossPhaseOne");
