@@ -45,6 +45,7 @@ public class PortalFist : MonoBehaviour
     {
         Vector3 _target = CalculatePortalPos();
         Debug.Log("Target Vector: " + _target);
+        _target = new Vector3(_target.x + 1, _target.y + 1, _target.z);
 
         GameObject _tempPortalFist = Instantiate(_portalFistPrefab, _target, Quaternion.identity);
 
