@@ -8,12 +8,15 @@ public class PortalFist : MonoBehaviour
     private Transform _playerTrans;
     private Transform _levelArea;
 
+    private float timer1 = 1;
+    private float timerReset = 1;
     private void Awake()
     {
         // Gets transform for play area
         _levelArea = _levelAreaBox.GetComponent<Transform>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerTrans = _player.transform;
+        timer1 = timerReset;
     }
 
 
@@ -26,10 +29,15 @@ public class PortalFist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Fire1") == 1)
+        if (Input.GetAxisRaw("Fire1") == 1 && timer1 <= 0)
         {
             SpawnPortalFist();
+            timer1 = timerReset;
         }
+    }
+    private void FixedUpdate()
+    {
+        timer1 -= Time.deltaTime;
     }
 
 
