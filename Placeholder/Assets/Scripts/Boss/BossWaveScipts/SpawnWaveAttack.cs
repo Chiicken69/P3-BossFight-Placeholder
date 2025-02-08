@@ -1,27 +1,39 @@
 
 using System;
-
-
+using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 using Random = UnityEngine.Random;
 
 public class SpawnWaveAttack : MonoBehaviour
 {
-    class Direction { public Vector2 North; public Vector2 East; public Vector2 South; public Vector2 West; };
+    class Direction
+    {
+        public Vector2 North = new Vector2(0, 9);
+        public Vector2 East = new Vector2(13, 0);
+        public Vector2 South = new Vector2(0, -9);
+        public Vector2 West = new Vector2(-13, 0);
+    };
 
+    [SerializeField]
+    private GameObject goonPrefab;
+    private Goon goonScript;
+
+    private Direction enemyDirections; // Global direction instance
 
     void Start()
     {
-     
-
-
+        enemyDirections = new Direction();  // Initialize Direction instance
+        SpawnWave(11, enemyDirections.North); // Pass the North vector
     }
- 
-  
 
-    float min = 3;
+   static List<GameObject> _EnemyList = new List<GameObject>();
+
+    float min = -3;
     float max = 3;
+    float x;
+    float y;
 
     // Update is called once per frame
     void Update()
@@ -29,52 +41,51 @@ public class SpawnWaveAttack : MonoBehaviour
 
     }
 
-    public void SpawnWave(int Amount, Vector2 Direction, Enum EnemyVariant)
+    public void SpawnWave(int Amount, Vector2 Direction)
     {
-        CreateEnemies(Amount, Direction, EnemyVariant);
+        CreateEnemies(Amount, Direction);
     }
 
-    private void CreateEnemies(int Amount, Vector2 Direction, Enum EnemyVariant)
-    {
-        Direction EnemyDir = new Direction();
-        EnemyDir.North = new Vector2(0, 9);
-        EnemyDir.South = new Vector2(0, -9);
-        EnemyDir.East = new Vector2(13, 0);
-        EnemyDir.West = new Vector2(-13, 0);
-
+    private void CreateEnemies(int Amount, Vector2 Direction)
+    { 
         for (int i = 0; i <= Amount; i++)
         {   
             
-            if (Direction == EnemyDir.North)
+            if (Direction == enemyDirections.North)
             {
-                    float x = Random.Range(min, max);
+                     x = Random.Range(min, max);
 
-                    float y = Random.Range(EnemyDir.North.y, max + EnemyDir.North.y);
+                     y = Random.Range(enemyDirections.North.y, max + enemyDirections.North.y);
 
                    //break;
             }
-            if (Direction == EnemyDir.South)
+            if (Direction == enemyDirections.South)
             {
 
-                float x = Random.Range(min, max);
+                 x = Random.Range(min, max);
 
-                float y = Random.Range(EnemyDir.South.y, max - EnemyDir.South.y);
+                 y = Random.Range(enemyDirections.South.y, max - enemyDirections.South.y);
             }
-            if (Direction == EnemyDir.East)
+            if (Direction == enemyDirections.East)
             {
-                float x = Random.Range(EnemyDir.East.x, max + EnemyDir.East.x);
+                 x = Random.Range(enemyDirections.East.x, max + enemyDirections.East.x);
 
-                float y = Random.Range(min, max);
+                 y = Random.Range(min, max);
             }
-            if (Direction == EnemyDir.West)
+            if (Direction == enemyDirections.West)
             {
-                float x = Random.Range(EnemyDir.West.x, max - EnemyDir.West.x);
-                float y = Random.Range(min, max);
+                 x = Random.Range(enemyDirections.West.x, max - enemyDirections.West.x);
+                 y = Random.Range(min, max);
 
             }
-            Vector3 Spawnpoint = new Vector(x, y, 0)
-        EnemyList = Instantiate(EnemyVariant, Spawnpoint)
-        EnemyList[i].InitializeEnemy(Enum Direction, Enum EnemyVariant)
+            Vector3 Spawnpoint = new Vector3(x, y, 0);
+
+
+            GameObject enemies = Instantiate(goonPrefab, Spawnpoint, quaternion.identity);
+            _EnemyList.Add(enemies);
+
+            //goonScript = GameObject.FindFirstObjectByType<Goon>();
+            //_EnemyList[i].goonScript.InitializeEnemy(Direction);
         }
     }
 }

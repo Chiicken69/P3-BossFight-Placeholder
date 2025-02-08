@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &165028211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &644738181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2eb0c5d4cdca84a8dde43b16d552a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
 --- !u!68 &1221262274
 EdgeCollider2D:
   m_ObjectHideFlags: 0
