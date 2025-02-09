@@ -84,7 +84,7 @@ public class PlayerAttack : MonoBehaviour
                 var main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
                 main.startColor = new UnityEngine.Color(255, 255, 255, 255);
 
-                if (hit.collider.name == "Boss" || hit.collider.name == "Goon")
+                if (hit.collider.name == "Boss" || hit.collider.name == "Goon(Clone)")
                 {
                     main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
                     main.startColor = new UnityEngine.Color(111111, 0, 0, 0);
