@@ -37,15 +37,30 @@ public class SpawnWaveAttack : MonoBehaviour
 
     void Start()
     {
-        enemyDirections = new Direction();  // Initialize Direction instance
-        SpawnWave(6, enemyDirections.East); // Pass the East vector to spawn enemies from the right
+
     }
 
     static List<GameObject> _EnemyList = new List<GameObject>();
 
     void Update()
     {
-
+        enemyDirections = new Direction();  // Initialize Direction instance
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            SpawnWave(6, enemyDirections.East); // Pass the East vector to spawn enemies from the right
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SpawnWave(6, enemyDirections.West); // Pass the East vector to spawn enemies from the right
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SpawnWave(6, enemyDirections.North); // Pass the East vector to spawn enemies from the right
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SpawnWave(6, enemyDirections.South); // Pass the East vector to spawn enemies from the right
+        }
     }
 
     public void SpawnWave(int Amount, Vector2 Direction)
@@ -66,7 +81,9 @@ public class SpawnWaveAttack : MonoBehaviour
             {
 
                 GameObject WarningClone = Instantiate(Warning, warningNorth, Quaternion.identity);
-                Destroy(WarningClone, _WarningDuration);
+                if (WarningClone != null){
+                    Destroy(WarningClone, _WarningDuration);
+                }
 
                 Spawnpoint = new Vector3(Random.Range(min, max), 9, 0); // Spawn at the top
                 Spawnpoint.y += Random.Range(min, max);
@@ -75,7 +92,10 @@ public class SpawnWaveAttack : MonoBehaviour
             else if (Direction == enemyDirections.South)
             {
                 GameObject WarningClone = Instantiate(Warning, warningSouth, Quaternion.identity);
+
+                if (WarningClone != null){ 
                 Destroy(WarningClone, _WarningDuration);
+                }
 
                 Spawnpoint = new Vector3(Random.Range(min, max), -9, 0); // Spawn at the bottom
                 Spawnpoint.y += Random.Range(min, max);
@@ -83,8 +103,10 @@ public class SpawnWaveAttack : MonoBehaviour
             else if (Direction == enemyDirections.East)
             {
                 GameObject WarningClone = Instantiate(Warning, warningEast, Quaternion.identity);
-                Destroy(WarningClone, _WarningDuration);
-
+                if (WarningClone != null)
+                {
+                    Destroy(WarningClone, _WarningDuration);
+                }
 
                 Spawnpoint = new Vector3(13, Random.Range(min, max), 0); // Spawn on the right
                 Spawnpoint.x += Random.Range(min, max);
@@ -92,7 +114,9 @@ public class SpawnWaveAttack : MonoBehaviour
             else if (Direction == enemyDirections.West)
             {
                 GameObject WarningClone = Instantiate(Warning, warningWest, Quaternion.identity);
+                if (WarningClone != null) { 
                 Destroy(WarningClone, _WarningDuration);
+                }
 
                 Spawnpoint = new Vector3(-13, Random.Range(min, max), 0); // Spawn on the left
                 Spawnpoint.x += Random.Range(min, max);
@@ -102,7 +126,10 @@ public class SpawnWaveAttack : MonoBehaviour
             _EnemyList.Add(enemy);
 
             StartCoroutine(EnemyMovement(enemy, Direction)); // Pass the specific enemy to the movement coroutine
-            Destroy(enemy, _HoardDuration);
+            if (enemy != null)
+            {
+                Destroy(enemy, _HoardDuration + 1);
+            }
         }
     }
 
