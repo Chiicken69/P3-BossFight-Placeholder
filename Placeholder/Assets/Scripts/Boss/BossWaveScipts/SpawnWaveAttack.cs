@@ -29,8 +29,6 @@ public class SpawnWaveAttack : MonoBehaviour
     [SerializeField]
     private GameObject _Warning;
 
-    private float goonerTimer;
-
     private Direction _enemyDirections; // Global direction instance
 
    
@@ -85,13 +83,9 @@ public class SpawnWaveAttack : MonoBehaviour
             {
 
                 GameObject WarningClone = Instantiate(_Warning, _warningNorth, Quaternion.identity);
-
-
-                if (WarningClone != null)
-                {
+                if (WarningClone != null){
                     Destroy(WarningClone, _WarningDuration);
                 }
-
 
                 Spawnpoint = new Vector3(Random.Range(_min, _max), 9, 0); // Spawn at the top
                 Spawnpoint.y += Random.Range(_min, _max);
@@ -129,8 +123,6 @@ public class SpawnWaveAttack : MonoBehaviour
                 Spawnpoint = new Vector3(-13, Random.Range(_min, _max), 0); // Spawn on the left
                 Spawnpoint.x += Random.Range(_min, _max);
             }
-
-     
 
             GameObject enemy = Instantiate(_goonPrefab, Spawnpoint, Quaternion.identity);
             //_EnemyList.Add(enemy);
