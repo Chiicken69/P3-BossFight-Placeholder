@@ -29,8 +29,6 @@ public class SpawnWaveAttack : MonoBehaviour
     [SerializeField]
     private GameObject _Warning;
 
-    private float goonerTimer;
-
     private Direction _enemyDirections; // Global direction instance
 
    
@@ -40,10 +38,7 @@ public class SpawnWaveAttack : MonoBehaviour
     Rigidbody goonRigidbody;
 
     
-    void Start()
-    {
-        goonerTimer = GetComponent<Goon>().goonerTimer;
-    }
+
 
     //static List<GameObject> _EnemyList = new List<GameObject>();
 
@@ -147,66 +142,66 @@ public class SpawnWaveAttack : MonoBehaviour
 
 
         float elapsedTime = 0f;
-          _goon = enemy.GetComponent<Goon>();
+        _goon = enemy.GetComponent<Goon>();
 
         //goonRigidbody = GetComponent<Rigidbody>();
 
-        float _speedRange = Random.Range(speed-(speed/2), speed+(speed / 2));
-
+        float _speedRange = Random.Range(speed - (speed / 2), speed + (speed / 2));
+        print(speed);
         //this belove
-        while (elapsedTime < goonerTimer)
-            // Update the position based on the inverted direction
-            if (Direction == _enemyDirections.North)
-            {
 
-                //Vector2 NorthDir = new Vector2(0,_speed);
+        // Update the position based on the inverted direction
+        if (Direction == _enemyDirections.North)
+        {
 
-                _goon.SetSpeed(_speedRange);
-                _goon.SetTarget(Vector2.down);
+            //Vector2 NorthDir = new Vector2(0,_speed);
 
-
-
-                /*
-                Rigidbody2D enemyRB = enemy.AddComponent<Rigidbody2D>();
-
-                // South
-                enemyRB.AddForce(0, Time.deltaTime * -Mathf.Abs(_enemyDirections.North.y) * _speed, 0);
-
-         
-
-                //enemyRB.AddForce(0,Time.deltaTime *-Mathf.Abs(_enemyDirections.North.y*_speed))
-                */
-            }
-            else if (Direction == _enemyDirections.South)
-            {
-                _goon.SetSpeed(_speedRange);
-                _goon.SetTarget(Vector2.up);
+            _goon.SetSpeed(_speedRange);
+            _goon.SetTarget(Vector2.down);
 
 
-                // North
-                // enemy.transform.position += new Vector3(0, Time.deltaTime * Mathf.Abs(_enemyDirections.South.y) * _speed, 0);
-            }
-            else if (Direction == _enemyDirections.East)
-            {
-                _goon.SetSpeed(_speedRange);
-                _goon.SetTarget(Vector2.left);
+
+            /*
+            Rigidbody2D enemyRB = enemy.AddComponent<Rigidbody2D>();
+
+            // South
+            enemyRB.AddForce(0, Time.deltaTime * -Mathf.Abs(_enemyDirections.North.y) * _speed, 0);
 
 
-                //  West
-                //enemy.transform.position += new Vector3(Time.deltaTime * -Mathf.Abs(_enemyDirections.East.x)* _speed, 0, 0);
-            }
-            else if (Direction == _enemyDirections.West)
-            {
-                _goon.SetSpeed(_speedRange);
-                _goon.SetTarget(Vector2.right);
 
-                // East
-                //enemy.transform.position += new Vector3(Time.deltaTime * Mathf.Abs(_enemyDirections.West.x) * _speed, 0, 0);
-            }
-
-            elapsedTime += Time.deltaTime;
-            yield return null; // Wait for the next frame
+            //enemyRB.AddForce(0,Time.deltaTime *-Mathf.Abs(_enemyDirections.North.y*_speed))
+            */
         }
+        else if (Direction == _enemyDirections.South)
+        {
+            _goon.SetSpeed(_speedRange);
+            _goon.SetTarget(Vector2.up);
+
+
+            // North
+            // enemy.transform.position += new Vector3(0, Time.deltaTime * Mathf.Abs(_enemyDirections.South.y) * _speed, 0);
+        }
+        else if (Direction == _enemyDirections.East)
+        {
+            _goon.SetSpeed(_speedRange);
+            _goon.SetTarget(Vector2.left);
+
+
+            //  West
+            //enemy.transform.position += new Vector3(Time.deltaTime * -Mathf.Abs(_enemyDirections.East.x)* _speed, 0, 0);
+        }
+        else if (Direction == _enemyDirections.West)
+        {
+            _goon.SetSpeed(_speedRange);
+            _goon.SetTarget(Vector2.right);
+
+            // East
+            //enemy.transform.position += new Vector3(Time.deltaTime * Mathf.Abs(_enemyDirections.West.x) * _speed, 0, 0);
+        }
+
+        elapsedTime += Time.deltaTime;
+        yield return null; // Wait for the next frame
+
 
         // After the enemy has finished moving, you can handle any other logic here (like destroying the enemy)
     }
