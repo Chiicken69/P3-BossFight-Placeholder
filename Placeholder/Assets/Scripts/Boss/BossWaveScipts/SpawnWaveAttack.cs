@@ -35,6 +35,7 @@ public class SpawnWaveAttack : MonoBehaviour
     float _WarningDuration = 0.5f;
 
 
+
     //static List<GameObject> _EnemyList = new List<GameObject>();
 
     void Update()
@@ -120,7 +121,7 @@ public class SpawnWaveAttack : MonoBehaviour
             GameObject enemy = Instantiate(_goonPrefab, Spawnpoint, Quaternion.identity);
             //_EnemyList.Add(enemy);
 
-  
+            
 
             StartCoroutine(EnemyMovement(enemy, Direction, speed)); // Pass the specific enemy to the movement coroutine
 

@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e272cbe199682a40a05b96a0e719238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goonerTimer: 10
 --- !u!50 &-1665416781930926999
 Rigidbody2D:
   serializedVersion: 5

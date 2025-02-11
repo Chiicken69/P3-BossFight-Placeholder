@@ -19,7 +19,7 @@ public class Goon : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7,9);
         _goonRB = GetComponent<Rigidbody2D>();
 
-  
+        
     }
 
     void OnCollisionEnter2D(UnityEngine.Collision2D collision)
