@@ -1,5 +1,4 @@
 using System.Collections;
-
 using UnityEngine;
 
 public class SpawnWaveAttack : MonoBehaviour
@@ -30,25 +29,28 @@ public class SpawnWaveAttack : MonoBehaviour
     [SerializeField]
     private GameObject _Warning;
 
- 
+    private float goonerTimer;
 
     private Direction _enemyDirections; // Global direction instance
 
-    [SerializeField]
-    float _HoardDuration = 10f;
+   
     float _WarningDuration = 0.5f;
 
 
     Rigidbody goonRigidbody;
+
+    
     void Start()
     {
-        
+        goonerTimer = GetComponent<Goon>().goonerTimer;
     }
 
     //static List<GameObject> _EnemyList = new List<GameObject>();
 
     void Update()
     {
+ 
+
         _enemyDirections = new Direction();  // Initialize Direction instance
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -140,10 +142,7 @@ public class SpawnWaveAttack : MonoBehaviour
 
             StartCoroutine(EnemyMovement(enemy, Direction, speed)); // Pass the specific enemy to the movement coroutine
 
-            if (enemy != null)
-            {
-                Destroy(enemy, _HoardDuration + 1);
-            }
+    
         }
     }
 
@@ -161,8 +160,7 @@ public class SpawnWaveAttack : MonoBehaviour
         float _speedRange = Random.Range(speed-(speed/2), speed+(speed / 2));
 
         //this belove
-        while (elapsedTime < _HoardDuration)
-        {
+        while (elapsedTime < goonerTimer)
             // Update the position based on the inverted direction
             if (Direction == _enemyDirections.North)
             {
