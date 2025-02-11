@@ -35,11 +35,6 @@ public class SpawnWaveAttack : MonoBehaviour
     float _WarningDuration = 0.5f;
 
 
-    void Start()
-    {
-        goonerTimer = GetComponent<Goon>().goonerTimer;
-    }
-
     //static List<GameObject> _EnemyList = new List<GameObject>();
 
     void Update()
@@ -149,7 +144,7 @@ public class SpawnWaveAttack : MonoBehaviour
         float _speedRange = Random.Range(speed-(speed/2), speed+(speed / 2));
 
         //this belove
-        while (elapsedTime < goonerTimer)
+
             // Update the position based on the inverted direction
             if (Direction == _enemyDirections.North)
             {
@@ -204,5 +199,5 @@ public class SpawnWaveAttack : MonoBehaviour
         }
 
         // After the enemy has finished moving, you can handle any other logic here (like destroying the enemy)
-    }
+    
 }

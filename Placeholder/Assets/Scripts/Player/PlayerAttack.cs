@@ -86,6 +86,8 @@ public class PlayerAttack : MonoBehaviour
                 {
                     main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
                     main.startColor = new UnityEngine.Color(111111, 0, 0, 0);
+
+
                 }
 
                 gunLine.SetPosition(1, hit.point);
