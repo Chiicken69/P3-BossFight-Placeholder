@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour
    [SerializeField] private int _maxHealth;
    
    private PlayerMovement _playerMovement;
+    
 
 
     private void Awake()
@@ -52,5 +53,14 @@ public class HealthSystem : MonoBehaviour
     public void InitializeHealth(int hp)
     {
        _currentHealth = _maxHealth;
-    } 
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PortalFist"))
+        {
+            print("ASDASDASDASDASDASDADASD");
+        }
+    }
 }

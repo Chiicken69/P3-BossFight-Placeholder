@@ -4,9 +4,14 @@ public class PortalFist : MonoBehaviour
 {
     [SerializeField] private GameObject _levelAreaBox;
     [SerializeField] private GameObject _portalFistPrefab;
+
+    [SerializeField] private float _portalSpawnDistanceDiff;
     private GameObject _player;
+    private PlayerMovement _playerMovement;
     private Transform _playerTrans;
     private Transform _levelArea;
+
+    private Vector2 TempTarget;
 
     private float timer1 = 1;
     private float timerReset = 1;
@@ -16,6 +21,7 @@ public class PortalFist : MonoBehaviour
         _levelArea = _levelAreaBox.GetComponent<Transform>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerTrans = _player.transform;
+        _playerMovement = _player.GetComponent<PlayerMovement>();
         timer1 = timerReset;
     }
 
@@ -31,7 +37,7 @@ public class PortalFist : MonoBehaviour
     {
         if (Input.GetAxisRaw("Fire1") == 1 && timer1 <= 0)
         {
-            SpawnPortalFist();
+            SpawnPortalFist(50);
             timer1 = timerReset;
         }
     }
@@ -41,11 +47,12 @@ public class PortalFist : MonoBehaviour
     }
 
 
-    public void SpawnPortalFist()
+    public void SpawnPortalFist(float P)
     {
+
         Vector3 _target = CalculatePortalPos();
         Debug.Log("Target Vector: " + _target);
-        _target = new Vector3(_target.x + 1, _target.y + 1, _target.z);
+        _target = new Vector3(_target.x, (_target.y) + 1, 0);
 
         GameObject _tempPortalFist = Instantiate(_portalFistPrefab, _target, Quaternion.identity);
 
@@ -54,8 +61,54 @@ public class PortalFist : MonoBehaviour
 
     private Vector3 CalculatePortalPos()
     {
+        Vector2 PlayerMoveDir = _playerMovement.readMoveDir;
+        PlayerMoveDir.Normalize();
+        print("Player movement direction: " + PlayerMoveDir);
+
+        TempTarget = new Vector2(0, 0);
+
+        if (_playerTrans.position.x > 0)
+        {
+            TempTarget.x += _playerTrans.position.x;
+            
+        } else
+        {
+            TempTarget.x += _playerTrans.position.x;
+            
+        }
+
+        if (_playerTrans.position.y > 0)
+        {
+            TempTarget.y += _playerTrans.position.y;
+        }
+        else
+        {
+            TempTarget.y += _playerTrans.position.y;
+        }
+
         
-        return _playerTrans.position;
+        if (PlayerMoveDir.x > 0)
+        {
+            TempTarget.x += _portalSpawnDistanceDiff;
+        }
+        else if (PlayerMoveDir.x < 0)
+        {
+            TempTarget.x -= _portalSpawnDistanceDiff;
+        }
+
+        if (PlayerMoveDir.y > 0)
+        {
+            TempTarget.y += _portalSpawnDistanceDiff;
+        }
+        else if (PlayerMoveDir.y < 0)
+        {
+            TempTarget.y -= _portalSpawnDistanceDiff;
+        }
+        
+
+
+
+        return TempTarget;
 
     }
 }
