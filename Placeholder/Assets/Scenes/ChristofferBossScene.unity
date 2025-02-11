@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 270149420}
   - component: {fileID: 270149419}
   - component: {fileID: 270149418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 1221262270}
   - component: {fileID: 1221262273}
   - component: {fileID: 1221262274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318163807}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fa13ba6948996744bc6f3b845298e6b, type: 3}
   m_Name: 
@@ -1494,7 +1494,7 @@ GameObject:
   - component: {fileID: 1832098539}
   - component: {fileID: 1832098538}
   - component: {fileID: 1832098537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1765,7 +1765,7 @@ GameObject:
   - component: {fileID: 1957121591}
   - component: {fileID: 1957121590}
   - component: {fileID: 1957121589}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,6 +1900,7 @@ GameObject:
   - component: {fileID: 1972968592}
   - component: {fileID: 1972968591}
   - component: {fileID: 1972968590}
+  - component: {fileID: 1972968594}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1990,6 +1991,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1972968594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972968589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7807e6b4e5fc6db4a895d086a784029c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2050343378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,7 +2014,7 @@ GameObject:
   - component: {fileID: 2050343381}
   - component: {fileID: 2050343380}
   - component: {fileID: 2050343379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

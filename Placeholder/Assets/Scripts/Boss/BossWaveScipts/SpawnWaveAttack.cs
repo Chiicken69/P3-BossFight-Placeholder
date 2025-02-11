@@ -1,6 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class SpawnWaveAttack : MonoBehaviour
@@ -21,10 +20,12 @@ public class SpawnWaveAttack : MonoBehaviour
 
     float _min = -3;
     float _max = 3;
-    float _speed = 0.5f;
+    //float _speed = 0.5f;
 
     [SerializeField]
     private GameObject _goonPrefab;
+
+    private Goon _goon;
 
     [SerializeField]
     private GameObject _Warning;
@@ -35,9 +36,11 @@ public class SpawnWaveAttack : MonoBehaviour
     float _HoardDuration = 10f;
     float _WarningDuration = 0.5f;
 
+
+    Rigidbody goonRigidbody;
     void Start()
     {
-
+        
     }
 
     //static List<GameObject> _EnemyList = new List<GameObject>();
@@ -47,28 +50,28 @@ public class SpawnWaveAttack : MonoBehaviour
         _enemyDirections = new Direction();  // Initialize Direction instance
         if (Input.GetKeyDown(KeyCode.D))
         {
-            SpawnWave(6, _enemyDirections.East); // Pass the East vector to spawn enemies from the right
+            SpawnWave(6, _enemyDirections.East, 2); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            SpawnWave(6, _enemyDirections.West); // Pass the East vector to spawn enemies from the right
+            SpawnWave(6, _enemyDirections.West, 2); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            SpawnWave(6, _enemyDirections.North); // Pass the East vector to spawn enemies from the right
+            SpawnWave(6, _enemyDirections.North, 2); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            SpawnWave(6, _enemyDirections.South); // Pass the East vector to spawn enemies from the right
+            SpawnWave(6, _enemyDirections.South, 2); // Pass the East vector to spawn enemies from the right
         }
     }
 
-    public void SpawnWave(int Amount, Vector2 Direction)
+    public void SpawnWave(int Amount, Vector2 Direction, float speed)
     {
-        CreateEnemies(Amount, Direction);
+        CreateEnemies(Amount, Direction, speed);
     }
 
-    private void CreateEnemies(int Amount, Vector2 Direction)
+    private void CreateEnemies(int Amount, Vector2 Direction, float speed)
     {
 
 
@@ -125,8 +128,10 @@ public class SpawnWaveAttack : MonoBehaviour
             GameObject enemy = Instantiate(_goonPrefab, Spawnpoint, Quaternion.identity);
             //_EnemyList.Add(enemy);
 
-            StartCoroutine(EnemyMovement(enemy, Direction)); // Pass the specific enemy to the movement coroutine
-   
+  
+
+            StartCoroutine(EnemyMovement(enemy, Direction, speed)); // Pass the specific enemy to the movement coroutine
+
             if (enemy != null)
             {
                 Destroy(enemy, _HoardDuration + 1);
@@ -134,15 +139,18 @@ public class SpawnWaveAttack : MonoBehaviour
         }
     }
 
-    private IEnumerator EnemyMovement(GameObject enemy, Vector2 Direction)
+    private IEnumerator EnemyMovement(GameObject enemy, Vector2 Direction, float speed)
     {
 
         yield return new WaitForSeconds(_WarningDuration);
 
 
         float elapsedTime = 0f;
+          _goon = enemy.GetComponent<Goon>();
 
+        //goonRigidbody = GetComponent<Rigidbody>();
 
+        float _speedRange = Random.Range(speed-(speed/3), speed+(speed / 3));
 
         //this belove
         while (elapsedTime < _HoardDuration)
@@ -151,32 +159,49 @@ public class SpawnWaveAttack : MonoBehaviour
             if (Direction == _enemyDirections.North)
             {
 
-     
-                
-                // South
-                enemy.transform.position += new Vector3(0, Time.deltaTime * -Mathf.Abs(_enemyDirections.North.y) * _speed, 0);
+                //Vector2 NorthDir = new Vector2(0,_speed);
 
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.down);
+
+
+
+                /*
+                Rigidbody2D enemyRB = enemy.AddComponent<Rigidbody2D>();
+
+                // South
+                enemyRB.AddForce(0, Time.deltaTime * -Mathf.Abs(_enemyDirections.North.y) * _speed, 0);
+
+         
+
+                //enemyRB.AddForce(0,Time.deltaTime *-Mathf.Abs(_enemyDirections.North.y*_speed))
+                */
             }
             else if (Direction == _enemyDirections.South)
             {
-            
-        
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.up);
+
 
                 // North
-                enemy.transform.position += new Vector3(0, Time.deltaTime * Mathf.Abs(_enemyDirections.South.y) * _speed, 0);
+                // enemy.transform.position += new Vector3(0, Time.deltaTime * Mathf.Abs(_enemyDirections.South.y) * _speed, 0);
             }
             else if (Direction == _enemyDirections.East)
             {
-               
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.left);
+
+
                 //  West
-                enemy.transform.position += new Vector3(Time.deltaTime * -Mathf.Abs(_enemyDirections.East.x)* _speed, 0, 0);
+                //enemy.transform.position += new Vector3(Time.deltaTime * -Mathf.Abs(_enemyDirections.East.x)* _speed, 0, 0);
             }
             else if (Direction == _enemyDirections.West)
             {
-             
-    
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.right);
+
                 // East
-                enemy.transform.position += new Vector3(Time.deltaTime * Mathf.Abs(_enemyDirections.West.x) * _speed, 0, 0);
+                //enemy.transform.position += new Vector3(Time.deltaTime * Mathf.Abs(_enemyDirections.West.x) * _speed, 0, 0);
             }
 
             elapsedTime += Time.deltaTime;
