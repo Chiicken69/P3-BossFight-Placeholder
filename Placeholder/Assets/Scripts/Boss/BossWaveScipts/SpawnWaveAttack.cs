@@ -37,9 +37,6 @@ public class SpawnWaveAttack : MonoBehaviour
     float _WarningDuration = 0.5f;
 
 
-    Rigidbody goonRigidbody;
-
-    
     void Start()
     {
         goonerTimer = GetComponent<Goon>().goonerTimer;
