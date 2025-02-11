@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         if (_invincibleTimer >= _invincibleSeconds)
         {
             isInvincible = false;
-            _invincibleTimer = _invincibleSeconds;
+            _invincibleTimer = 0;
         }
        
     }
