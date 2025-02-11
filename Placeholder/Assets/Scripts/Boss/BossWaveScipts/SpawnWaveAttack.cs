@@ -39,8 +39,6 @@ public class SpawnWaveAttack : MonoBehaviour
 
     void Update()
     {
- 
-
         _enemyDirections = new Direction();  // Initialize Direction instance
         if (Input.GetKeyDown(KeyCode.L))
         {

@@ -41,7 +41,7 @@ public class Goon : MonoBehaviour
         print(_speed);
         _goonRB.AddForce(_target * _speed);
 
-              if (Timer == 0)
+        if (goonerTimer == 0)
         { 
         Destroy(this.gameObject);
         }
