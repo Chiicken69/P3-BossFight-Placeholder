@@ -48,19 +48,19 @@ public class SpawnWaveAttack : MonoBehaviour
     void Update()
     {
         _enemyDirections = new Direction();  // Initialize Direction instance
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             SpawnWave(6, _enemyDirections.East, 2); // Pass the East vector to spawn enemies from the right
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             SpawnWave(6, _enemyDirections.West, 2); // Pass the East vector to spawn enemies from the right
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             SpawnWave(6, _enemyDirections.North, 2); // Pass the East vector to spawn enemies from the right
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             SpawnWave(6, _enemyDirections.South, 2); // Pass the East vector to spawn enemies from the right
         }
@@ -150,7 +150,7 @@ public class SpawnWaveAttack : MonoBehaviour
 
         //goonRigidbody = GetComponent<Rigidbody>();
 
-        float _speedRange = Random.Range(speed-(speed/3), speed+(speed / 3));
+        float _speedRange = Random.Range(speed-(speed/2), speed+(speed / 2));
 
         //this belove
         while (elapsedTime < _HoardDuration)
