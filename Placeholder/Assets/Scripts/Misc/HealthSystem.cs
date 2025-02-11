@@ -55,12 +55,12 @@ public class HealthSystem : MonoBehaviour
        _currentHealth = _maxHealth;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PortalFist"))
         {
-            print("ASDASDASDASDASDASDADASD");
+            TakeDamage(1);
+            Debug.Log("Player took" + 1 + " Damage, from portal fist");
         }
     }
 }

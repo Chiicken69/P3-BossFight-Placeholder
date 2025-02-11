@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelAreaBox: {fileID: 1370293656}
   _portalFistPrefab: {fileID: 414691781702884351, guid: 3e69a246ca304e94fb0a5a019a6cc123, type: 3}
+  _timeToActivatehitbox: 0
   _portalSpawnDistanceDiff: 2
 --- !u!4 &164255853
 Transform:
