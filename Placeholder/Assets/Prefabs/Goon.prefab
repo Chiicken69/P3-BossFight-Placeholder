@@ -8,7 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream:Placeholder/Assets/Prefabs/Goon.prefab
   - component: {fileID: 3109506948942249828}
   - component: {fileID: 4589052394507371428}
   - component: {fileID: 6120898240031686113}
@@ -17,15 +16,6 @@ GameObject:
   m_Layer: 7
   m_Name: Goon
   m_TagString: Untagged
-=======
-  - component: {fileID: 4909496156998835873}
-  - component: {fileID: 5728297035620873918}
-  - component: {fileID: 4905041763568573434}
-  - component: {fileID: -9015608030738734625}
-  m_Layer: 0
-  m_Name: PortalFist
-  m_TagString: PortalFist
->>>>>>> Stashed changes:Placeholder/Assets/Prefabs/Boss/PortalFist.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,76 +96,7 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream:Placeholder/Assets/Prefabs/Goon.prefab
   m_GameObject: {fileID: 1918361746869205127}
-=======
-  m_GameObject: {fileID: 414691781702884351}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2ccfe126edad8374cbdd724f68dbfbae, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-9015608030738734625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414691781702884351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40df72e978d4a6b4f99cc8e904852642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &876358027831086921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 600964530850739900}
-  - component: {fileID: 4651851262089979916}
-  m_Layer: 0
-  m_Name: Hitbox
-  m_TagString: PortalFist
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &600964530850739900
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876358027831086921}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005, y: -0.395, z: 0}
-  m_LocalScale: {x: 1.053, y: 1.658475, z: 1.053}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4909496156998835873}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4651851262089979916
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876358027831086921}
->>>>>>> Stashed changes:Placeholder/Assets/Prefabs/Boss/PortalFist.prefab
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1

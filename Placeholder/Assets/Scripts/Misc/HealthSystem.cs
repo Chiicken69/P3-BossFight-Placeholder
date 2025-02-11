@@ -52,19 +52,5 @@ public class HealthSystem : MonoBehaviour
     public void InitializeHealth(int hp)
     {
        _currentHealth = _maxHealth;
-<<<<<<< Updated upstream
     } 
-=======
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("PortalFist"))
-        {
-            TakeDamage(1);
-            Debug.Log("Player took" + 1 + " Damage, from portal fist");
-        }
-    }
->>>>>>> Stashed changes
 }
