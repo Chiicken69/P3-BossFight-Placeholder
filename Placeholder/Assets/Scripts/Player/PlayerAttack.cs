@@ -13,9 +13,9 @@ public class PlayerAttack : MonoBehaviour
     //public GameObject bulletPrefab;
     private GameObject _player;
     private GameObject _firedBullet;
-    private GameObject uiAmmo;
+    private GameObject _uiAmmo;
     [SerializeField]
-    private GameObject reloadingText;
+    private GameObject _reloadingText;
 
     [SerializeField]
     float _gunDuration =0.03f;
@@ -46,8 +46,8 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
 
-        uiAmmo = GameObject.Find("UI Ammo");
-        animator = uiAmmo.GetComponent<Animator>();
+        _uiAmmo = GameObject.Find("UI Ammo");
+        animator = _uiAmmo.GetComponent<Animator>();
         _player = this.gameObject;
         gunLine = GetComponent<LineRenderer>();
         gunLine.SetWidth(0.2f, 0.2f);
@@ -67,11 +67,12 @@ public class PlayerAttack : MonoBehaviour
         //when you run out of bullets it reloads automatically
         if (_currentAmmoLoaded == 0 && _Reloading == false)
         {
-            StartCoroutine(ReloadTimer());
+            StartCoroutine(ReloadTimer()); 
         }
         // if left click go boom
         if (Input.GetMouseButtonDown(0) && _timer < 0 && _currentAmmoLoaded > 0 && _Reloading == false)
         {
+            //checks if raycast hits collider then do damage and play partikal
             Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
             gunLine.SetPosition(0, transform.position);
@@ -93,20 +94,15 @@ public class PlayerAttack : MonoBehaviour
 
                 Destroy(tempHitParticlObject, 1);
 
-            } else
-            {
-                //gunLine.SetPosition(1, +);
-                Debug.DrawRay(transform.position, shot, UnityEngine.Color.red);
             }
+            // Calculates the Quaternion rotation of Gun spark yellow partical effect 
             float angle = Mathf.Atan2(shot.y, shot.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.Euler(0, 0, angle);
             GameObject tempParticlObject = Instantiate(_partikalObject, transform.position, rotation);
 
             Destroy(tempParticlObject, 1);
-  
 
-
-            //tempParticlObject.GetComponent<ParticleSystem>().Play();
+            //plays the shoot gun coroutine and lowers loaded ammo
             StartCoroutine(ShootGun());
             --_currentAmmoLoaded;
             _timer = _resetTimer;
@@ -117,7 +113,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
-    // if press then reload and run timer
+    // if press R then reload and run coroutine timer 
     private void Reload()
     {
         if (Input.GetKeyDown(KeyCode.R) && _Reloading == false)
@@ -125,23 +121,9 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(ReloadTimer());
         }
     }
-    
-
-    private void AmmoUI(int _currentAmmo)
-    {
-        animator.SetInteger("AmmoCount", _currentAmmo);
-    }
-
-    private Vector2 CalculateShot()
-    {
-        Vector2 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 playerPos = transform.position;
-        Vector2 shot = screenPos - playerPos;
-        return shot;
-    }
     IEnumerator ReloadTimer()
     {
-        reloadingText.SetActive(true);
+        _reloadingText.SetActive(true);
         _Reloading = true;
         yield return new WaitForSeconds(_reloadTimer);
         int _reloadAmount = _maxAmmoCapacity - _currentAmmoLoaded; //check how much need to reload
@@ -150,8 +132,24 @@ public class PlayerAttack : MonoBehaviour
         _reloadAmount = (_currentAmmoLoaded + _reloadAmount) >= 0 ? _reloadAmount : _currentAmmoLoaded;
         _currentAmmoLoaded += _reloadAmount;
         _Reloading = false;
-        reloadingText.SetActive(false);
+        _reloadingText.SetActive(false);
     }
+
+    private void AmmoUI(int _currentAmmo)
+    {
+        animator.SetInteger("AmmoCount", _currentAmmo); //updated the ammo ui
+    }
+
+    //calculates where i shot in the world
+    private Vector2 CalculateShot()
+    {
+        Vector2 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = transform.position;
+        Vector2 shot = screenPos - playerPos;
+        return shot;
+    }
+
+    //draws the gunline trail for however long _gunDuration is 
     IEnumerator ShootGun()
     {
         gunLine.enabled = true;

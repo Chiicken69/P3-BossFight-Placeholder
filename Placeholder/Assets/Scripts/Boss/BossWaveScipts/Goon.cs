@@ -3,31 +3,16 @@ using UnityEngine;
 
 public class Goon : MonoBehaviour
 {
-    class EnemyVariant { public int speed; public int hp; public int damage;};
 
-    int _SpeedSet;
-
-    int _hpSet;
-
-    int _damageSet;
-
-    public void InitializeEnemy(Vector2 Direction, int EnemyVariant)
+    void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        EnemyVariant goon = new EnemyVariant();
-        goon.speed =  1;
-
-        _SpeedSet = goon.speed;
-
-
-        _hpSet = goon.hp;
+        if (collision.collider.name == "Player")
+        {
+            //Output the Collider's GameObject's name
+            Debug.Log(collision.collider.name);
 
 
-        _damageSet = goon.damage;
-
-
-
-
-
-
+        }
     }
+
 }

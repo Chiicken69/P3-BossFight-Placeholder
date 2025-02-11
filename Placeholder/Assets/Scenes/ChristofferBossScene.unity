@@ -201,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841263880144045517, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8644001628814640816, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
       propertyPath: m_Color.a
@@ -932,12 +932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2eb0c5d4cdca84a8dde43b16d552a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warningNorth: {x: 0, y: 4.34}
-  warningSouth: {x: 0, y: -4.34}
-  warningEast: {x: 8.01, y: 0}
-  warningWest: {x: -8.01, y: 0}
-  goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
-  Warning: {fileID: 2743487812028495921, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
+  _goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
+  _Warning: {fileID: 2743487812028495921, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
   _HoardDuration: 10
 --- !u!68 &1221262274
 EdgeCollider2D:
@@ -1008,7 +1004,8 @@ GameObject:
   - component: {fileID: 1318163814}
   - component: {fileID: 1318163815}
   - component: {fileID: 1318163816}
-  m_Layer: 0
+  - component: {fileID: 1318163817}
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1062,7 +1059,7 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -1124,7 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b275bb2bd8e4e4f83b362fb7e2ceb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadingText: {fileID: 1025538058}
+  _reloadingText: {fileID: 1025538058}
   _gunDuration: 0.03
   _timer: 0.25
   _resetTimer: 0.25
@@ -1176,7 +1173,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -875780923
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -1258,6 +1255,42 @@ MonoBehaviour:
   _invincibleSeconds: 0
   _invincibleTimer: 0
   _dashTimer: 1
+--- !u!58 &1318163817
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318163807}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &1360312722
 GameObject:
   m_ObjectHideFlags: 0
