@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _baseMoveDir;
     private float DashInput;
     private Rigidbody2D _rb;
+    public Vector2 readMoveDir { get; set; }
    
    
 
@@ -56,12 +57,13 @@ public class PlayerMovement : MonoBehaviour
     private void UpdatePlayerPos()
     {
         Vector2 _baseMoveDir = new Vector2(_xInput, _yInput);
-        print("base move dir" + _baseMoveDir);
+       // print("base move dir" + _baseMoveDir);
         _baseMoveDir.Normalize();
         Vector2 _moveDir = _baseMoveDir;
         _moveDir *= _baseMoveSpeed;
         
         _rb.AddForce(_moveDir);
+        readMoveDir = _moveDir;
         
         if (DashInput > 0 && _dashTimer < 0)
         {
@@ -88,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (_invincibleTimer >= _invincibleSeconds)
         {
             isInvincible = false;
-            _invincibleTimer = _invincibleSeconds;
+            _invincibleTimer = 0;
         }
        
     }
