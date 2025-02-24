@@ -572,7 +572,9 @@ MonoBehaviour:
   musicSounds: []
   sfxSounds:
   - name: gunShot
-    clip: {fileID: 8300000, guid: c2899714a8958e249a8e61c54b64c9ff, type: 3}
+    clip: {fileID: 8300000, guid: 72965bf7e28a154478bb9908615d7133, type: 3}
+  - name: gunReload
+    clip: {fileID: 8300000, guid: 73ae64eb7cdd9cb4cbe40b1fa496e951, type: 3}
   musicSource: {fileID: 1893984929}
   sfxSource: {fileID: 2041953563}
 --- !u!4 &669095346
