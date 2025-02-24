@@ -570,7 +570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
+  sfxSounds:
+  - name: gunShot
+    clip: {fileID: 8300000, guid: c2899714a8958e249a8e61c54b64c9ff, type: 3}
   musicSource: {fileID: 1893984929}
   sfxSource: {fileID: 2041953563}
 --- !u!4 &669095346

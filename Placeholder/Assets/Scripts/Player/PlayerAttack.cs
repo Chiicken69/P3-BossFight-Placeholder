@@ -72,6 +72,8 @@ public class PlayerAttack : MonoBehaviour
         // if left click go boom
         if (Input.GetMouseButtonDown(0) && _timer < 0 && _currentAmmoLoaded > 0 && _Reloading == false)
         {
+            //call sfx
+            AudioManager.Instance.PlaySFX("gunShot");
             //checks if raycast hits collider then do damage and play partikal
             Vector2 shot = CalculateShot();
           RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
