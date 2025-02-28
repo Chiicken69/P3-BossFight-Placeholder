@@ -572,7 +572,7 @@ MonoBehaviour:
   musicSounds: []
   sfxSounds:
   - name: gunShot
-    clip: {fileID: 8300000, guid: 72965bf7e28a154478bb9908615d7133, type: 3}
+    clip: {fileID: 8300000, guid: c2a448366b1eb8e4dbadb28a0459814a, type: 3}
   - name: gunReload
     clip: {fileID: 8300000, guid: 73ae64eb7cdd9cb4cbe40b1fa496e951, type: 3}
   musicSource: {fileID: 1893984929}
@@ -988,7 +988,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
   _Warning: {fileID: 2743487812028495921, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
-  _HoardDuration: 10
 --- !u!68 &1221262274
 EdgeCollider2D:
   m_ObjectHideFlags: 0

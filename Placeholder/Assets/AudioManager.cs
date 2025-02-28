@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -48,8 +50,24 @@ public class AudioManager : MonoBehaviour
            sfxSource.PlayOneShot(sound.clip);
         }
     }
+   /* 
+    public void PlaySFXVariance(string name, float variance)
+    {
+        Sound sound = Array.Find(sfxSounds, x => x.name == name);
+
+        if (sound == null)
+        {
+            Debug.Log("Sound not found or is null");
+        }
+        else
+        {
+            float _pitchVariance = Random.Range(-variance, variance);
+            sfxSource.pitch = _pitchVariance;
+             sfxSource.PlayOneShot(sound.clip);
+        }
+    }
     
-    
+    */
     
     
     
