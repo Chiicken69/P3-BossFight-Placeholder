@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 1221262270}
   - component: {fileID: 1221262273}
   - component: {fileID: 1221262274}
+  - component: {fileID: 1221262275}
   m_Layer: 9
   m_Name: Boss
   m_TagString: Untagged
@@ -534,7 +535,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
   _Warning: {fileID: 2743487812028495921, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
-  _HoardDuration: 10
 --- !u!68 &1221262274
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -590,6 +590,20 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1221262275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221262269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e5c5dbaa42ea447bbcbeb6733317c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 0
+  _maxHealth: 200
 --- !u!1 &1318163807
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +619,7 @@ GameObject:
   - component: {fileID: 1318163815}
   - component: {fileID: 1318163816}
   - component: {fileID: 1318163817}
+  - component: {fileID: 1318163818}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -722,6 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _reloadingText: {fileID: 1025538058}
+  revolverDamage: 10
   _gunDuration: 0.03
   _timer: 0.25
   _resetTimer: 0.25
@@ -891,6 +907,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1318163818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318163807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8d0ec7c3726ce48921fd13d7968bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 0
+  _maxHealth: 10
 --- !u!1 &1360312722
 GameObject:
   m_ObjectHideFlags: 0
