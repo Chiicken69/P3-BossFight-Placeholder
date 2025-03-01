@@ -89,10 +89,11 @@ public class PlayerAttack : MonoBehaviour
 
                 if (hit.collider.name == "Boss" || hit.collider.name == "Goon(Clone)")
                 {
+                    
                     main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
                     main.startColor = new UnityEngine.Color(111111, 0, 0, 0);
 
-              
+                    
                     hit.collider.GetComponent<HealthGeneral>().TakeDamage(revolverDamage);
                     
                 }

@@ -54,6 +54,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 73ae64eb7cdd9cb4cbe40b1fa496e951, type: 3}
   - name: Warning
     clip: {fileID: 8300000, guid: 7dc99fb79dfb7fd4f8729ecb0a6ac081, type: 3}
+  - name: HitFlesh
+    clip: {fileID: 8300000, guid: 52be3eccebcf13248af09415fbf5311a, type: 3}
   sfxSoundArray:
   - name: PortalSound
     clip:
