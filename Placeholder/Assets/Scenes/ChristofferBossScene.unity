@@ -592,6 +592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
   _Warning: {fileID: 2743487812028495921, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
+  spawnEnemyAmmount: 12
+  SpeedAmmount: 3
 --- !u!68 &1221262274
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -804,7 +806,7 @@ MonoBehaviour:
   _hitWallPartikalObject: {fileID: 7496593291163084576, guid: f282492a5a9e3174985a6b1bf333d177, type: 3}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 904
   lineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!120 &1318163815
 LineRenderer:
