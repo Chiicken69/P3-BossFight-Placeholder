@@ -18,6 +18,9 @@ public class PlayerAttack : MonoBehaviour
     private GameObject _reloadingText;
 
     [SerializeField]
+    private int revolverDamage;
+
+    [SerializeField]
     float _gunDuration =0.03f;
 
     LineRenderer gunLine;
@@ -88,6 +91,10 @@ public class PlayerAttack : MonoBehaviour
                 {
                     main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
                     main.startColor = new UnityEngine.Color(111111, 0, 0, 0);
+
+              
+                    hit.collider.GetComponent<HealthGeneral>().TakeDamage(revolverDamage);
+                    
                 }
 
                 gunLine.SetPosition(1, hit.point);
