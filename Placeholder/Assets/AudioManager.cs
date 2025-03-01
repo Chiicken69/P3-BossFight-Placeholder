@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     public Sound[] musicSounds, sfxSounds;
+    public SoundArray[] sfxSoundArray;
     public AudioSource musicSource, sfxSource;
 
     private void Awake()
@@ -50,6 +51,25 @@ public class AudioManager : MonoBehaviour
            sfxSource.PlayOneShot(sound.clip);
         }
     }
+    
+    public void PlaySFXArrayRandom(string name)
+    {
+        SoundArray soundArray = Array.Find(sfxSoundArray, x => x.name == name);
+
+        if (soundArray == null)
+        {
+            Debug.Log("Sound not found or is null");
+        }
+        else
+        {
+            int i;
+            i = Random.Range(0, soundArray.clip.Length);
+
+            sfxSource.PlayOneShot(soundArray.clip[i]);
+        }
+    }
+    
+    
    /* 
     public void PlaySFXVariance(string name, float variance)
     {
