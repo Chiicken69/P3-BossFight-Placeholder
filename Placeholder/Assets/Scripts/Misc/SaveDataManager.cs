@@ -17,17 +17,20 @@ public class SaveDataManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private int sceneIndex;
 
+    //Player scripts with data, get from player object.
     private PlayerAttack PlayerAttackScript;
+    private HealthSystem healthSystem;
 
-    private static SaveDataManager staticSDM;
+    private static GameObject staticSDMobject;
 
 
     void Awake()
     {
         //Only one save data manager
-        if(staticSDM == null)
+        if(staticSDMobject == null)
         {
-            staticSDM = this;
+            staticSDMobject = this.gameObject;
+            DontDestroyOnLoad(this.gameObject);
         } else
         {
             Destroy(this.gameObject);
@@ -47,10 +50,35 @@ public class SaveDataManager : MonoBehaviour
 
         //Load correct save file
         //There is a difference between if a player just died / is reloading from a save between sessions.
+        try
+        {
+            
+            if (File.Exists(quickFullSavePath)) //Prøver først at loade fra quick save, ift. f.eks. hvis man bare går ind på en ny scene
+            {
+                LoadSaveDataFromFile(quickFullSavePath);
+                Debug.Log("Loaded save data from quick");
+            } else if (File.Exists(permFullSavePath)) //Er der ingen quick save, er det fordi man måske fortsætter et spil fra en forrig session
+            {
+                LoadSaveDataFromFile(permFullSavePath);
+                Debug.Log("Loaded save data from perm");
+            } else                                      //Ellers starter man et nyt spil
+            {
+                //Hvilken fil skal skabes her?
+                //Quick?
+                //Perm skal vel kun laves ved "perm save points" osv så?
+                Debug.Log("No save data file found on loading. Creating quick save file.");
+                CreateSaveFile(quickFullSavePath);
+                
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log("Error when loading save data." + e.ToString());
+            throw;
+        }
 
 
-        LoadSaveDataFromFile(permFullSavePath);
-        Debug.Log("Loaded save data from file / created new file.");
+        
 
     }
 
@@ -106,7 +134,7 @@ public class SaveDataManager : MonoBehaviour
 
     private void LoadSaveDataFromFile(string savePath)
     {
-        UpdatePlayerData();
+        
 
         if (!File.Exists(savePath))
         {
@@ -130,6 +158,7 @@ public class SaveDataManager : MonoBehaviour
             }
         }
 
+        UpdatePlayerData();
     }
     /// <summary>
     /// Function to save data from other scripts
@@ -198,6 +227,11 @@ public class SaveDataManager : MonoBehaviour
     private void UpdatePlayerData()
     {
         //Update actual information in save data object.
+    }
+
+    private void GetReferenceScripts()
+    {
+        //This is the scripts data is pulled from / pushed to.
     }
 
 
