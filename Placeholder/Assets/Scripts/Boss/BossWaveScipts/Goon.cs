@@ -10,7 +10,8 @@ public class Goon : MonoBehaviour
     Rigidbody2D _goonRB;
 
     [SerializeField] public float goonerTimer;
-
+    [SerializeField] public int goonDamage;
+    private GameObject player;
 
     private void Awake()
     {
@@ -19,18 +20,12 @@ public class Goon : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7,9);
         _goonRB = GetComponent<Rigidbody2D>();
 
-        
+        player = GameObject.Find("Player");
     }
 
     void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (collision.collider.name == "Player")
-        {
-            //Output the Collider's GameObject's name
-            //Debug.Log(collision.collider.name);
-
-
-        }
+ 
     }
 
     float _speed;
@@ -44,6 +39,14 @@ public class Goon : MonoBehaviour
         if (goonerTimer == 0)
         { 
         Destroy(this.gameObject);
+        }
+
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+        if (distance < 1.0f) // Threshold for "collision"
+        {
+            //Output the Collider's GameObject's name
+
+            player.GetComponent<HealthSystem>().TakeDamage(goonDamage);
         }
     }
 
