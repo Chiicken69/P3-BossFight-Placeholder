@@ -52,6 +52,7 @@ public class Goon : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        
       
     
     /*
@@ -68,13 +69,13 @@ public class Goon : MonoBehaviour
 }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+   
 
 
             if (collision.gameObject.name == "Trigger Player")
             {
                 player.GetComponent<HealthSystem>().TakeDamage(goonDamage);
-               
+                _timer = _resetTimer; // Reset timer so damage isn't applied immediately again
             }
         
     }

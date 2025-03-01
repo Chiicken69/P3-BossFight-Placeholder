@@ -61,6 +61,7 @@ public class SpawnWaveAttack : MonoBehaviour
 
     public void SpawnWave(int Amount, Vector2 Direction, float speed)
     {
+        AudioManager.Instance.PlaySFXArrayRandom("GoonSpawnSound");
         CreateEnemies(Amount, Direction, speed);
     }
 
