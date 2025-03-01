@@ -15,12 +15,13 @@ public class HealthGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    CheckForDeath(_currentHealth);
+   
     }
     public void TakeDamage(int DamageToTake)
     {
 
         _currentHealth -= DamageToTake;
+        CheckForDeath(_currentHealth);
 
 
     }
