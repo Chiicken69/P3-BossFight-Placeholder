@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 1221262275}
   m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,6 +592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goonPrefab: {fileID: 1918361746869205127, guid: 89b8743529438134ba36c8833edbd27b, type: 3}
   _Warning: {fileID: 2743487812028495921, guid: dd2b2b9883524ba41a9eecf7923afaef, type: 3}
+  spawnEnemyAmmount: 12
+  SpeedAmmount: 3
 --- !u!68 &1221262274
 EdgeCollider2D:
   m_ObjectHideFlags: 0

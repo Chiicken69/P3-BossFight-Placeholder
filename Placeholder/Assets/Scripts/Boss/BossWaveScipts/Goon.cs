@@ -11,12 +11,15 @@ public class Goon : MonoBehaviour
 
     Rigidbody2D _goonRB;
 
-    [SerializeField] public float goonerTimer;
-    [SerializeField] public int goonDamage;
-    private GameObject player;
+    [SerializeField] private float goonerTimer;
 
+    [SerializeField] private int goonDamage;
+    private GameObject player;
+    private SpriteRenderer spriteRenderer;
+    bool inview = false;
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         Physics2D.IgnoreLayerCollision(7, 8);
         Physics2D.IgnoreLayerCollision(7, 9);
         Physics2D.IgnoreLayerCollision(7, 6);
@@ -35,46 +38,42 @@ public class Goon : MonoBehaviour
     float _speed;
     Vector2 _target;
 
-    [SerializeField]
-    float _timer = 0f;
-    [SerializeField]
-    float _resetTimer = 1f;
 
     private void FixedUpdate()
     {
-        _timer-= Time.deltaTime; 
+        goonerTimer -= Time.deltaTime; 
 
         print(_speed);
         _goonRB.AddForce(_target * _speed);
 
-        if (goonerTimer == 0)
+        if (goonerTimer <= 0)
         {
             Destroy(this.gameObject);
         }
 
-      
-    
-    /*
-    if (_timer <= 0) // Only deal damage when the timer has expired
-    {
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance < 1.0f) // Threshold for "collision"
+
+        if (spriteRenderer.isVisible == true && inview == false)
         {
-            player.GetComponent<HealthSystem>().TakeDamage(goonDamage);
-            _timer = _resetTimer; // Reset the timer so damage isn't applied immediately next frame
+            inview= true;
+            AudioManager.Instance.PlaySFXArrayRandom("GoonSpawnSound");
+            Debug.Log("Object is in view!");
         }
+        else if(spriteRenderer.isVisible != true)
+        {
+            inview = false; //ik fucked i do this each frame
+        }
+
+
     }
-    */
-}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+   
 
 
             if (collision.gameObject.name == "Trigger Player")
             {
                 player.GetComponent<HealthSystem>().TakeDamage(goonDamage);
-               
+
             }
         
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PortalFist
   - Triggerbox
+  - Boss
   layers:
   - Default
   - TransparentFX

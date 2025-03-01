@@ -34,8 +34,11 @@ public class SpawnWaveAttack : MonoBehaviour
    
     float _WarningDuration = 0.5f;
 
+    [SerializeField]
+    int spawnEnemyAmmount = 6;
 
-
+    [SerializeField]
+    int SpeedAmmount = 3;
     //static List<GameObject> _EnemyList = new List<GameObject>();
 
     void Update()
@@ -43,24 +46,25 @@ public class SpawnWaveAttack : MonoBehaviour
         _enemyDirections = new Direction();  // Initialize Direction instance
         if (Input.GetKeyDown(KeyCode.L))
         {
-            SpawnWave(6, _enemyDirections.East, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.East, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            SpawnWave(6, _enemyDirections.West, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.West, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            SpawnWave(6, _enemyDirections.North, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.North, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SpawnWave(6, _enemyDirections.South, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.South, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
     }
 
     public void SpawnWave(int Amount, Vector2 Direction, float speed)
     {
+       
         CreateEnemies(Amount, Direction, speed);
     }
 
