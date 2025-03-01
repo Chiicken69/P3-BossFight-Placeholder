@@ -142,7 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goonerTimer: 10
   goonDamage: 10
-  player: {fileID: 0}
+  _timer: 0.5
+  _resetTimer: 0.5
 --- !u!50 &-1665416781930926999
 Rigidbody2D:
   serializedVersion: 5
