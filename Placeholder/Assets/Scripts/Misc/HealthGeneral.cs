@@ -41,7 +41,20 @@ public class HealthGeneral : MonoBehaviour
     {
         if (hp <= 0)
         {
+<<<<<<< Updated upstream
             Destroy(this.gameObject);
+=======
+            if (!gameObject.CompareTag("Boss"))
+            {
+                AudioManager.Instance.PlaySFX("GoonDeath");
+                Destroy(this.gameObject);    
+            }
+            else
+            {
+                print("The boss cant die >:)");
+            }
+            
+>>>>>>> Stashed changes
         }
     }
 }
