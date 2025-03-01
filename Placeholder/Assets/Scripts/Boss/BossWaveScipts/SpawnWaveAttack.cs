@@ -66,7 +66,7 @@ public class SpawnWaveAttack : MonoBehaviour
 
     private void CreateEnemies(int Amount, Vector2 Direction, float speed)
     {
-
+    AudioManager.Instance.PlaySFX("Warning");
 
         for (int i = 0; i < Amount; i++)
         {
