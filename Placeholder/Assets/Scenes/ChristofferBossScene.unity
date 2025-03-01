@@ -305,42 +305,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: sfxSoundArray.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: sfxSoundArray.Array.data[1].name
-      value: GoonSpawnSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: sfxSoundArray.Array.data[1].clip.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: 'sfxSoundArray.Array.data[1].clip.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: c03de2550d1ddaf42aa54ab732e0fd45, type: 3}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: 'sfxSoundArray.Array.data[1].clip.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 096e9b0514db5444d848f5951c6e6f90, type: 3}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: 'sfxSoundArray.Array.data[1].clip.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 9f5d3a4707a10be42b11128c50c524b4, type: 3}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: 'sfxSoundArray.Array.data[1].clip.Array.data[3]'
-      value: 
-      objectReference: {fileID: 8300000, guid: c372ec89979d2a942b225d9a4ad4742d, type: 3}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: 'sfxSoundArray.Array.data[1].clip.Array.data[4]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 252b4f890d2949f43a6fa47d74b3440f, type: 3}
-    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
-      propertyPath: 'sfxSoundArray.Array.data[1].clip.Array.data[5]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 42df078cd29c20b459056d3b5b4c0d2b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -539,7 +503,7 @@ GameObject:
   - component: {fileID: 1221262275}
   m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -840,7 +804,7 @@ MonoBehaviour:
   _hitWallPartikalObject: {fileID: 7496593291163084576, guid: f282492a5a9e3174985a6b1bf333d177, type: 3}
   layerMask:
     serializedVersion: 2
-    m_Bits: 904
+    m_Bits: 0
   lineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!120 &1318163815
 LineRenderer:

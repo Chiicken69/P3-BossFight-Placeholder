@@ -41,7 +41,15 @@ public class HealthGeneral : MonoBehaviour
     {
         if (hp <= 0)
         {
-            Destroy(this.gameObject);
+            if (!gameObject.CompareTag("Boss"))
+            {
+                Destroy(this.gameObject);    
+            }
+            else
+            {
+                print("The boss cant die >:)");
+            }
+            
         }
     }
 }
