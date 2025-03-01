@@ -16,6 +16,7 @@ public class Goon : MonoBehaviour
     [SerializeField] private int goonDamage;
     private GameObject player;
     private SpriteRenderer spriteRenderer;
+    bool inview = false;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -51,10 +52,15 @@ public class Goon : MonoBehaviour
         }
 
 
-        if (spriteRenderer.isVisible)
+        if (spriteRenderer.isVisible == true && inview == false)
         {
+            inview= true;
             AudioManager.Instance.PlaySFXArrayRandom("GoonSpawnSound");
             Debug.Log("Object is in view!");
+        }
+        else if(spriteRenderer.isVisible != true)
+        {
+            inview = false; //ik fucked i do this each frame
         }
 
 
