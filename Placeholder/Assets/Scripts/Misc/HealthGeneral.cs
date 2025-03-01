@@ -15,7 +15,7 @@ public class HealthGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+    CheckForDeath(_currentHealth);
     }
     public void TakeDamage(int DamageToTake)
     {
@@ -35,5 +35,13 @@ public class HealthGeneral : MonoBehaviour
     public void InitializeHealth(int hp)
     {
         _currentHealth = _maxHealth;
+    }
+
+    public void CheckForDeath(int hp)
+    {
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
