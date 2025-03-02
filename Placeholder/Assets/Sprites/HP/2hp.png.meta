@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f728654059ecc874fa8936bdc963c41b
+guid: 72bd23badd478734b9ebc0d114e72122
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4416929064198070180
-    second: png-transparent-mario-fire-fireball-heroes-orange-video-game_0
+      213: 6054049712467196922
+    second: 2hp_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: png-transparent-mario-fire-fireball-heroes-orange-video-game_0
+      name: 2hp_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 920
-        height: 600
+        width: 584
+        height: 830
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5020620b6ae3b2c0800000000000000
-      internalID: -4416929064198070180
+      spriteID: afbb924432e440450800000000000000
+      internalID: 6054049712467196922
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      png-transparent-mario-fire-fireball-heroes-orange-video-game_0: -4416929064198070180
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
