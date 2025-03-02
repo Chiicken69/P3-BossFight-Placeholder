@@ -1,8 +1,9 @@
 using UnityEngine;
 public class HealthGeneral : MonoBehaviour
 {
-    [SerializeField] private int _currentHealth;
-    [SerializeField] private int _maxHealth;
+    [SerializeField] public int _currentHealth { get; set; }
+    [SerializeField] public int _maxHealth { get; set; }
+
     private void Awake()
     {
         InitializeHealth(_maxHealth);
@@ -22,6 +23,7 @@ public class HealthGeneral : MonoBehaviour
 
         _currentHealth -= DamageToTake;
         CheckForDeath(_currentHealth);
+        
 
 
     }
