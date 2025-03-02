@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
 
     private void Awake()
     {
-        _bossHP = GameObject.Find("Boss").GetComponent<HealthGeneral>();
+        _bossHP = GameObject.Find("Boss").GetComponent<HealthGeneral>(); // find the boss by name in hierarchy
         _healthSlider.maxValue = _bossHP._maxHealth;
         _EaseHealthSlider.maxValue = _bossHP._maxHealth;
     }
