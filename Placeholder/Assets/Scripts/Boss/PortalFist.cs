@@ -43,6 +43,7 @@ public class PortalFist : MonoBehaviour
     }
     public void SpawnPortalFist(float P)
     {
+        AudioManager.Instance.PlaySFXArrayRandom("PortalSound");
         Vector3 _target = CalculatePortalPos();
         Debug.Log("Target Vector: " + _target);
         _target = new Vector3(_target.x, (_target.y) + 1, 0);

@@ -34,45 +34,43 @@ public class SpawnWaveAttack : MonoBehaviour
    
     float _WarningDuration = 0.5f;
 
+    [SerializeField]
+    int spawnEnemyAmmount = 6;
 
-    Rigidbody goonRigidbody;
-
-    
-
-
+    [SerializeField]
+    int SpeedAmmount = 3;
     //static List<GameObject> _EnemyList = new List<GameObject>();
 
     void Update()
     {
- 
-
         _enemyDirections = new Direction();  // Initialize Direction instance
         if (Input.GetKeyDown(KeyCode.L))
         {
-            SpawnWave(6, _enemyDirections.East, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.East, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            SpawnWave(6, _enemyDirections.West, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.West, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            SpawnWave(6, _enemyDirections.North, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.North, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SpawnWave(6, _enemyDirections.South, 2); // Pass the East vector to spawn enemies from the right
+            SpawnWave(spawnEnemyAmmount, _enemyDirections.South, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
     }
 
     public void SpawnWave(int Amount, Vector2 Direction, float speed)
     {
+       
         CreateEnemies(Amount, Direction, speed);
     }
 
     private void CreateEnemies(int Amount, Vector2 Direction, float speed)
     {
-
+    AudioManager.Instance.PlaySFX("Warning");
 
         for (int i = 0; i < Amount; i++)
         {
@@ -127,7 +125,7 @@ public class SpawnWaveAttack : MonoBehaviour
             GameObject enemy = Instantiate(_goonPrefab, Spawnpoint, Quaternion.identity);
             //_EnemyList.Add(enemy);
 
-  
+            
 
             StartCoroutine(EnemyMovement(enemy, Direction, speed)); // Pass the specific enemy to the movement coroutine
 
@@ -142,67 +140,67 @@ public class SpawnWaveAttack : MonoBehaviour
 
 
         float elapsedTime = 0f;
-        _goon = enemy.GetComponent<Goon>();
+          _goon = enemy.GetComponent<Goon>();
 
         //goonRigidbody = GetComponent<Rigidbody>();
 
-        float _speedRange = Random.Range(speed - (speed / 2), speed + (speed / 2));
-        print(speed);
+        float _speedRange = Random.Range(speed-(speed/2), speed+(speed / 2));
+
         //this belove
 
-        // Update the position based on the inverted direction
-        if (Direction == _enemyDirections.North)
-        {
+            // Update the position based on the inverted direction
+            if (Direction == _enemyDirections.North)
+            {
 
-            //Vector2 NorthDir = new Vector2(0,_speed);
+                //Vector2 NorthDir = new Vector2(0,_speed);
 
-            _goon.SetSpeed(_speedRange);
-            _goon.SetTarget(Vector2.down);
-
-
-
-            /*
-            Rigidbody2D enemyRB = enemy.AddComponent<Rigidbody2D>();
-
-            // South
-            enemyRB.AddForce(0, Time.deltaTime * -Mathf.Abs(_enemyDirections.North.y) * _speed, 0);
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.down);
 
 
 
-            //enemyRB.AddForce(0,Time.deltaTime *-Mathf.Abs(_enemyDirections.North.y*_speed))
-            */
+                /*
+                Rigidbody2D enemyRB = enemy.AddComponent<Rigidbody2D>();
+
+                // South
+                enemyRB.AddForce(0, Time.deltaTime * -Mathf.Abs(_enemyDirections.North.y) * _speed, 0);
+
+         
+
+                //enemyRB.AddForce(0,Time.deltaTime *-Mathf.Abs(_enemyDirections.North.y*_speed))
+                */
+            }
+            else if (Direction == _enemyDirections.South)
+            {
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.up);
+
+
+                // North
+                // enemy.transform.position += new Vector3(0, Time.deltaTime * Mathf.Abs(_enemyDirections.South.y) * _speed, 0);
+            }
+            else if (Direction == _enemyDirections.East)
+            {
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.left);
+
+
+                //  West
+                //enemy.transform.position += new Vector3(Time.deltaTime * -Mathf.Abs(_enemyDirections.East.x)* _speed, 0, 0);
+            }
+            else if (Direction == _enemyDirections.West)
+            {
+                _goon.SetSpeed(_speedRange);
+                _goon.SetTarget(Vector2.right);
+
+                // East
+                //enemy.transform.position += new Vector3(Time.deltaTime * Mathf.Abs(_enemyDirections.West.x) * _speed, 0, 0);
+            }
+
+            elapsedTime += Time.deltaTime;
+            yield return null; // Wait for the next frame
         }
-        else if (Direction == _enemyDirections.South)
-        {
-            _goon.SetSpeed(_speedRange);
-            _goon.SetTarget(Vector2.up);
-
-
-            // North
-            // enemy.transform.position += new Vector3(0, Time.deltaTime * Mathf.Abs(_enemyDirections.South.y) * _speed, 0);
-        }
-        else if (Direction == _enemyDirections.East)
-        {
-            _goon.SetSpeed(_speedRange);
-            _goon.SetTarget(Vector2.left);
-
-
-            //  West
-            //enemy.transform.position += new Vector3(Time.deltaTime * -Mathf.Abs(_enemyDirections.East.x)* _speed, 0, 0);
-        }
-        else if (Direction == _enemyDirections.West)
-        {
-            _goon.SetSpeed(_speedRange);
-            _goon.SetTarget(Vector2.right);
-
-            // East
-            //enemy.transform.position += new Vector3(Time.deltaTime * Mathf.Abs(_enemyDirections.West.x) * _speed, 0, 0);
-        }
-
-        elapsedTime += Time.deltaTime;
-        yield return null; // Wait for the next frame
-
 
         // After the enemy has finished moving, you can handle any other logic here (like destroying the enemy)
-    }
+    
 }

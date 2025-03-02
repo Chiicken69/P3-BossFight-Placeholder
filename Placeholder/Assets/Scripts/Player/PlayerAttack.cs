@@ -18,6 +18,9 @@ public class PlayerAttack : MonoBehaviour
     private GameObject _reloadingText;
 
     [SerializeField]
+    private int revolverDamage;
+
+    [SerializeField]
     float _gunDuration =0.03f;
 
     LineRenderer gunLine;
@@ -42,6 +45,8 @@ public class PlayerAttack : MonoBehaviour
 
     bool _Reloading = false;
 
+    [SerializeField] private LayerMask layerMask;
+
     public UnityEngine.Color lineColor = UnityEngine.Color.gray;
     void Start()
     {
@@ -51,6 +56,7 @@ public class PlayerAttack : MonoBehaviour
         _player = this.gameObject;
         gunLine = GetComponent<LineRenderer>();
         gunLine.SetWidth(0.2f, 0.2f);
+        Physics2D.IgnoreLayerCollision(2, 10);
     }
     void Update()
     {
@@ -76,7 +82,8 @@ public class PlayerAttack : MonoBehaviour
             AudioManager.Instance.PlaySFX("gunShot");
             //checks if raycast hits collider then do damage and play partikal
             Vector2 shot = CalculateShot();
-          RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity);
+          RaycastHit2D hit = Physics2D.Raycast(transform.position, shot, Mathf.Infinity, layerMask);
+            Debug.Log("LayerMask Value: " + layerMask.value);
             gunLine.SetPosition(0, transform.position);
             gunLine.startColor = new UnityEngine.Color(0.5f, 0.5f, 0.5f, 0.7f);;
             if (hit.collider != null)
@@ -86,8 +93,13 @@ public class PlayerAttack : MonoBehaviour
 
                 if (hit.collider.name == "Boss" || hit.collider.name == "Goon(Clone)")
                 {
+                    
                     main = _hitWallPartikalObject.GetComponent<ParticleSystem>().main;
                     main.startColor = new UnityEngine.Color(111111, 0, 0, 0);
+
+                    
+                    hit.collider.GetComponent<HealthGeneral>().TakeDamage(revolverDamage);
+                    
                 }
 
                 gunLine.SetPosition(1, hit.point);
