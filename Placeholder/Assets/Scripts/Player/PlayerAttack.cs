@@ -57,6 +57,8 @@ public class PlayerAttack : MonoBehaviour
         gunLine = GetComponent<LineRenderer>();
         gunLine.SetWidth(0.2f, 0.2f);
         Physics2D.IgnoreLayerCollision(2, 10);
+        Physics2D.IgnoreLayerCollision(3, 2);
+        Physics2D.IgnoreLayerCollision(9, 3);
     }
     void Update()
     {
