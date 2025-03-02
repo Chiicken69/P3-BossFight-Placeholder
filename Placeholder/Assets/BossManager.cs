@@ -23,6 +23,16 @@ public class BossManager : MonoBehaviour
 
     //horde
 
+    Vector2[] spawnPositions = new Vector2[]
+    {
+            new Vector2(0, 9),
+            new Vector2(13, 0),
+            new Vector2(0, -9),
+            new Vector2(-13, 0)
+    };
+
+    private float _hordeTimer = 0f;
+
     private void Start()
     {
         maxBossHealth = GetComponent<HealthGeneral>()._maxHealth;
@@ -67,13 +77,22 @@ public class BossManager : MonoBehaviour
         else if (bossHealth >= 0)
         {
             print("phase3");
-
+            transform.position = new Vector3(8, -4, 0);
             GetComponent<PortalFist>().enabled = false;
             GetComponent<BossFireAttack>().enabled = false;
             GetComponent<BossMovement>().enabled = false;
-            GetComponent<SpawnWaveAttack>().enabled = false;
+            GetComponent<SpawnWaveAttack>().enabled = true;
+
+            _hordeTimer += Time.deltaTime;
+
+            if (_hordeTimer > 3)
+            {
 
 
+                _hordeTimer = 0;
+                Vector2[] positions = { new Vector2(0, 9), new Vector2(13, 0), new Vector2(0, -9), new Vector2(-13, 0) };
+                GetComponent<SpawnWaveAttack>().SpawnWave(Random.Range(6, 13), positions[Random.Range(0, positions.Length)], 3);
+            }
 
         }
         else
