@@ -139,7 +139,8 @@ public class SaveDataManager : MonoBehaviour
         if (!File.Exists(savePath))
         {
             Debug.Log("Highscore save data file doesnt exist, attempting creation.");
-            CreateSaveFile(savePath);
+            //CreateSaveFile(savePath);
+            Debug.Log("Auto-creation of save-files disabled. Creation aborted.");
         }
         else
         {
