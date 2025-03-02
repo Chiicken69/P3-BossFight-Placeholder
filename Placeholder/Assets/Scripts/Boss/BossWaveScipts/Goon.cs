@@ -17,6 +17,8 @@ public class Goon : MonoBehaviour
     private GameObject player;
     private SpriteRenderer spriteRenderer;
     bool inview = false;
+
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,9 +26,9 @@ public class Goon : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 9);
         Physics2D.IgnoreLayerCollision(7, 6);
         Physics2D.IgnoreLayerCollision(7, 3);
+     
 
         _goonRB = GetComponent<Rigidbody2D>();
-
         player = GameObject.Find("Player");
     }
 
@@ -45,6 +47,13 @@ public class Goon : MonoBehaviour
 
         print(_speed);
         _goonRB.AddForce(_target * _speed);
+
+
+        if (_target.x < 0 && spriteRenderer.flipX == false)
+        {
+            spriteRenderer.flipX = true;
+        }
+
 
         if (goonerTimer <= 0)
         {
