@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 369251888}
   - component: {fileID: 369251889}
   - component: {fileID: 369251890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boss (Fireball)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theBossShouldAttack: 0
-  player: {fileID: 955927266}
+  player: {fileID: 706257731}
   fireBall: {fileID: 5046289671390713980, guid: 7a8837a324646ef42b009b8e3cfcd0a6, type: 3}
 --- !u!1 &483995586
 GameObject:
@@ -719,7 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506480916}
   - component: {fileID: 506480917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,6 +885,11 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &706257731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 31294451275121591, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
+  m_PrefabInstance: {fileID: 929333591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &827126063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 31294451275121591, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6335888518466377921, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1065,7 +1074,7 @@ PrefabInstance:
       objectReference: {fileID: 1589366298}
     - target: {fileID: 9088321704576506123, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
       propertyPath: layerMask.m_Bits
-      value: 904
+      value: 896
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

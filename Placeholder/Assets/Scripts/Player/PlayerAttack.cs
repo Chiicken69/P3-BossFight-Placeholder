@@ -60,7 +60,8 @@ public class PlayerAttack : MonoBehaviour
     }
     void Update()
     {
-      FireShot();
+        Physics2D.IgnoreLayerCollision(8, 3);
+        FireShot();
         Reload();
         AmmoUI(_currentAmmoLoaded);
       _timer -= Time.deltaTime;
