@@ -1,6 +1,6 @@
 
 using System.Collections;
-
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -38,7 +38,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject _partikalObject;
     [SerializeField] private GameObject _hitWallPartikalObject;
 
-    private int _currentAmmoLoaded;
+    [DoNotSerialize]
+    public int _currentAmmoLoaded;
     private int _maxAmmoCapacity = 6;
 
     private Animator animator;
