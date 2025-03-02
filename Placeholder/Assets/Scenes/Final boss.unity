@@ -1446,17 +1446,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalFist
       objectReference: {fileID: 0}
-    - target: {fileID: 414691781702884351, guid: 3e69a246ca304e94fb0a5a019a6cc123, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4909496156998835873, guid: 3e69a246ca304e94fb0a5a019a6cc123, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.952
+      value: 16.952
       objectReference: {fileID: 0}
     - target: {fileID: 4909496156998835873, guid: 3e69a246ca304e94fb0a5a019a6cc123, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4909496156998835873, guid: 3e69a246ca304e94fb0a5a019a6cc123, type: 3}
       propertyPath: m_LocalPosition.z
