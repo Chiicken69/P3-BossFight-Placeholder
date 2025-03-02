@@ -33,8 +33,9 @@ public class BossManager : MonoBehaviour
     {
 
         bossHealth = GetComponent<HealthGeneral>()._currentHealth;
+        print(bossHealth);
 
-        if (bossHealth > (maxBossHealth) * (2/3))
+        if (bossHealth >= 600)
         {
             print("phase1");
 
@@ -54,7 +55,7 @@ public class BossManager : MonoBehaviour
 
             }
         }
-        else if (bossHealth > (maxBossHealth) * (1 / 3))
+        else if (bossHealth >= 300)
         {
             GetComponent<PortalFist>().enabled = false;
             GetComponent<BossFireAttack>().enabled = true;
@@ -63,12 +64,21 @@ public class BossManager : MonoBehaviour
             print("phase2");
 
         }
-        else if (bossHealth > 0)
+        else if (bossHealth >= 0)
         {
             print("phase3");
+
+            GetComponent<PortalFist>().enabled = false;
+            GetComponent<BossFireAttack>().enabled = false;
+            GetComponent<BossMovement>().enabled = false;
+            GetComponent<SpawnWaveAttack>().enabled = false;
+
+
+
         }
         else
         {
+            gameObject.SetActive(false);
             print("YOU WIN!!!");
         }
 
