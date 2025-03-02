@@ -13,12 +13,14 @@ public class DeathScreen : MonoBehaviour
         deathVideo.loopPointReached += OnVideoEnd; 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == ("Enemy"))
+
+        if (GetComponent<HealthSystem>()._currentHealth <= 0)
         {
             Die();
         }
+
     }
 
     void Die()
