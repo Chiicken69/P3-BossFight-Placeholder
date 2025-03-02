@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: cdf4ba6c74066d747b846fd5a725b0b7
+guid: af0beb490d1d84440a86715c9c1fc22d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6628414004274166170
-    second: gun_0
+      213: 3920121389672063531
+    second: cowboyspritesheet_0
+  - first:
+      213: 7183888758010159957
+    second: cowboyspritesheet_1
+  - first:
+      213: -8194133321517490624
+    second: cowboyspritesheet_2
+  - first:
+      213: -7109557713293647110
+    second: cowboyspritesheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +122,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gun_0
+      name: cowboyspritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 348
-        height: 166
-      alignment: 9
-      pivot: {x: 0.14288461, y: 0.7114348}
+        width: 430
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 666830bf4942304a0800000000000000
-      internalID: -6628414004274166170
+      spriteID: dacfcbe356e957f4bb8eb9cc3eacd787
+      internalID: -6682184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboyspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 430
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37df353dc936594aaf394bdd2ebd0a8
+      internalID: 23402668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboyspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 0
+        width: 430
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba03d88ff4c81243919d17b9d14a67e
+      internalID: -202157497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboyspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 0
+        width: 430
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85e8b0bfeeac264eac901f6e3d66c9d
+      internalID: -1496331119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboyspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 0
+        width: 430
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8fa54e50f934d40bc13aae569d2e88
+      internalID: 2009833605
       vertices: []
       indices: 
       edges: []
@@ -138,7 +235,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 48401313129c81741a1692b6f3c3f422
+    spriteID: c9f5944e4b0aa3b4b8450e6c36c23be9
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +245,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gun_0: -6628414004274166170
+      cowboyspritesheet_0: -6682184
+      cowboyspritesheet_1: 23402668
+      cowboyspritesheet_2: -202157497
+      cowboyspritesheet_3: -1496331119
+      cowboyspritesheet_4: 2009833605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
