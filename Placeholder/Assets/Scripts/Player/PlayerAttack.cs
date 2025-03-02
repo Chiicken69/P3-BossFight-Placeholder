@@ -50,7 +50,8 @@ public class PlayerAttack : MonoBehaviour
     public UnityEngine.Color lineColor = UnityEngine.Color.gray;
     void Start()
     {
-
+        AudioManager.Instance.PlayMusic("bossSangLoop");
+        AudioManager.loop;
         _uiAmmo = GameObject.Find("UI Ammo");
         animator = _uiAmmo.GetComponent<Animator>();
         _player = this.gameObject;
