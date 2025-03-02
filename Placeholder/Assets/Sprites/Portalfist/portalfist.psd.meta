@@ -1,0 +1,1692 @@
+fileFormatVersion: 2
+guid: c1a6aa8d69f6c9b4f9045e8c3b39f7ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4679885111235207576
+    second: portalfist_0
+  - first:
+      213: 5190018360732557665
+    second: portalfist_1
+  - first:
+      213: -8255564206888269283
+    second: portalfist_2
+  - first:
+      213: 1975952340314673641
+    second: portalfist_3
+  - first:
+      213: 3082520014554226634
+    second: portalfist_4
+  - first:
+      213: -7439392588735226756
+    second: portalfist_5
+  - first:
+      213: 5054434007908715770
+    second: portalfist_6
+  - first:
+      213: -3059206925338487598
+    second: portalfist_7
+  - first:
+      213: -3858232612063410583
+    second: portalfist_8
+  - first:
+      213: -6085245091532379618
+    second: portalfist_9
+  - first:
+      213: -6693477623363973625
+    second: portalfist_10
+  - first:
+      213: 2476755442484021046
+    second: portalfist_11
+  - first:
+      213: -5970428360457407803
+    second: portalfist_12
+  - first:
+      213: -6308502257077311096
+    second: portalfist_13
+  - first:
+      213: -1672629441738839893
+    second: portalfist_14
+  - first:
+      213: -6600489038718649975
+    second: portalfist_15
+  - first:
+      213: -9001713153591053299
+    second: portalfist_16
+  - first:
+      213: -6165743893500607382
+    second: portalfist_17
+  - first:
+      213: 1122907891306734679
+    second: portalfist_18
+  - first:
+      213: -409104278136292489
+    second: portalfist_19
+  - first:
+      213: 7350591707680858431
+    second: portalfist_20
+  - first:
+      213: 2847361549783772735
+    second: portalfist_21
+  - first:
+      213: 4017435443236313053
+    second: portalfist_22
+  - first:
+      213: 6775842799800726376
+    second: portalfist_23
+  - first:
+      213: 7217227446621520297
+    second: portalfist_24
+  - first:
+      213: -1193189508797980726
+    second: portalfist_25
+  - first:
+      213: 4492270939056790761
+    second: portalfist_26
+  - first:
+      213: -7189262436201929244
+    second: portalfist_27
+  - first:
+      213: -5660991031806706265
+    second: portalfist_28
+  - first:
+      213: -4002687025467870160
+    second: portalfist_29
+  - first:
+      213: -3040439165623419843
+    second: portalfist_30
+  - first:
+      213: -5038066481334509100
+    second: portalfist_31
+  - first:
+      213: 4341988508043312101
+    second: portalfist_32
+  - first:
+      213: 9105299374795898881
+    second: portalfist_33
+  - first:
+      213: -4682801071386605857
+    second: portalfist_34
+  - first:
+      213: 8474531604636733905
+    second: portalfist_35
+  - first:
+      213: -512170447944702209
+    second: portalfist_36
+  - first:
+      213: 7561772097381842459
+    second: portalfist_37
+  - first:
+      213: 5231251542317283575
+    second: portalfist_38
+  - first:
+      213: -2079261948882291418
+    second: portalfist_39
+  - first:
+      213: 2288242031614123700
+    second: portalfist_40
+  - first:
+      213: -7282336821532164801
+    second: portalfist_41
+  - first:
+      213: 5980436596247497500
+    second: portalfist_42
+  - first:
+      213: -583772251100610748
+    second: portalfist_43
+  - first:
+      213: 3487816033305432442
+    second: portalfist_44
+  - first:
+      213: -2515106591455231684
+    second: portalfist_45
+  - first:
+      213: -5048981568524957214
+    second: portalfist_46
+  - first:
+      213: -4623956699134823799
+    second: portalfist_47
+  - first:
+      213: 7642750864952672945
+    second: portalfist_48
+  - first:
+      213: -338413061380464892
+    second: portalfist_49
+  - first:
+      213: -2345752026016317805
+    second: portalfist_50
+  - first:
+      213: -4283827073737624941
+    second: portalfist_51
+  - first:
+      213: 6256611841437293701
+    second: portalfist_52
+  - first:
+      213: -7415446208610717688
+    second: portalfist_53
+  - first:
+      213: 997252180245189567
+    second: portalfist_54
+  - first:
+      213: -1636249226912250246
+    second: portalfist_55
+  - first:
+      213: -1361243494220674470
+    second: portalfist_56
+  - first:
+      213: 6076823658222352938
+    second: portalfist_57
+  - first:
+      213: 8975574160467486226
+    second: portalfist_58
+  - first:
+      213: 1075340695549336342
+    second: portalfist_59
+  - first:
+      213: 1689490297841956655
+    second: portalfist_60
+  - first:
+      213: 8575558151159348670
+    second: portalfist_61
+  - first:
+      213: 3461020242580572185
+    second: portalfist_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portalfist_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e9f235945bd0fb0800000000000000
+      internalID: -4679885111235207576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16128318336a60840800000000000000
+      internalID: 5190018360732557665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_2
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1acefbf7185e6d80800000000000000
+      internalID: -8255564206888269283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_3
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1de893f2efb6b10800000000000000
+      internalID: 1975952340314673641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_4
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf59801f9f47ca20800000000000000
+      internalID: 3082520014554226634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_5
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c53cb2bd7f1c890800000000000000
+      internalID: -7439392588735226756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_6
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc8d0e53f4f42640800000000000000
+      internalID: 5054434007908715770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_7
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4d8c082838b85d0800000000000000
+      internalID: -3059206925338487598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_8
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966022191edc47ac0800000000000000
+      internalID: -3858232612063410583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_9
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ae50c84dddc8ba0800000000000000
+      internalID: -6085245091532379618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_10
+      rect:
+        serializedVersion: 2
+        x: 2615
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e4d5ba09dfb13a0800000000000000
+      internalID: -6693477623363973625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_11
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63786c8d3f33f5220800000000000000
+      internalID: 2476755442484021046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_12
+      rect:
+        serializedVersion: 2
+        x: 3127
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2b402f907c42da0800000000000000
+      internalID: -5970428360457407803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_13
+      rect:
+        serializedVersion: 2
+        x: 3383
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889282efe92b378a0800000000000000
+      internalID: -6308502257077311096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_14
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 390
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8eb4c7260a9c8e0800000000000000
+      internalID: -1672629441738839893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_15
+      rect:
+        serializedVersion: 2
+        x: 3895
+        y: 367
+        width: 146
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989b05fa03a5664a0800000000000000
+      internalID: -6600489038718649975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_16
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 328
+        width: 146
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d047e36749d731380800000000000000
+      internalID: -9001713153591053299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_17
+      rect:
+        serializedVersion: 2
+        x: 4407
+        y: 271
+        width: 146
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64ccdba890ee6aa0800000000000000
+      internalID: -6165743893500607382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_18
+      rect:
+        serializedVersion: 2
+        x: 4663
+        y: 271
+        width: 146
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75422d817ce559f00800000000000000
+      internalID: 1122907891306734679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_19
+      rect:
+        serializedVersion: 2
+        x: 4919
+        y: 325
+        width: 146
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77bf79993d1925af0800000000000000
+      internalID: -409104278136292489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_20
+      rect:
+        serializedVersion: 2
+        x: 5175
+        y: 347
+        width: 146
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31ef39863c820660800000000000000
+      internalID: 7350591707680858431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_21
+      rect:
+        serializedVersion: 2
+        x: 5431
+        y: 363
+        width: 146
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ea7f95e3cd38720800000000000000
+      internalID: 2847361549783772735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_22
+      rect:
+        serializedVersion: 2
+        x: 5687
+        y: 313
+        width: 146
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd71a26104cc0c730800000000000000
+      internalID: 4017435443236313053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_23
+      rect:
+        serializedVersion: 2
+        x: 5943
+        y: 203
+        width: 146
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863b2006021a80e50800000000000000
+      internalID: 6775842799800726376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_24
+      rect:
+        serializedVersion: 2
+        x: 6145
+        y: 64
+        width: 233
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1431bcf1eb82460800000000000000
+      internalID: 7217227446621520297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_25
+      rect:
+        serializedVersion: 2
+        x: 6455
+        y: 85
+        width: 146
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf9f5aa670f07fe0800000000000000
+      internalID: -1193189508797980726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_26
+      rect:
+        serializedVersion: 2
+        x: 6711
+        y: 85
+        width: 161
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec5a453e90c75e30800000000000000
+      internalID: 4492270939056790761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_27
+      rect:
+        serializedVersion: 2
+        x: 6967
+        y: 78
+        width: 146
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5ef1597eb9a3c90800000000000000
+      internalID: -7189262436201929244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_28
+      rect:
+        serializedVersion: 2
+        x: 7223
+        y: 89
+        width: 146
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad3d7856ae1071b0800000000000000
+      internalID: -5660991031806706265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_29
+      rect:
+        serializedVersion: 2
+        x: 7479
+        y: 89
+        width: 146
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0343ce38b599378c0800000000000000
+      internalID: -4002687025467870160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_30
+      rect:
+        serializedVersion: 2
+        x: 7735
+        y: 89
+        width: 146
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cb4d310b03ec5d0800000000000000
+      internalID: -3040439165623419843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_31
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 89
+        width: 146
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d121416a31351ab0800000000000000
+      internalID: -5038066481334509100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_32
+      rect:
+        serializedVersion: 2
+        x: 3881
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebffb01b87d14c30800000000000000
+      internalID: 4341988508043312101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_33
+      rect:
+        serializedVersion: 2
+        x: 4137
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 100cb481a858c5e70800000000000000
+      internalID: 9105299374795898881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_34
+      rect:
+        serializedVersion: 2
+        x: 4393
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6ce227c39530fb0800000000000000
+      internalID: -4682801071386605857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_35
+      rect:
+        serializedVersion: 2
+        x: 4649
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1913c28959b9570800000000000000
+      internalID: 8474531604636733905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_36
+      rect:
+        serializedVersion: 2
+        x: 4905
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6adc1f0b764e8f0800000000000000
+      internalID: -512170447944702209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_37
+      rect:
+        serializedVersion: 2
+        x: 5161
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1eb7e898afc0f860800000000000000
+      internalID: 7561772097381842459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_38
+      rect:
+        serializedVersion: 2
+        x: 5417
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f83986bf83299840800000000000000
+      internalID: 5231251542317283575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_39
+      rect:
+        serializedVersion: 2
+        x: 5673
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62572ed164af423e0800000000000000
+      internalID: -2079261948882291418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_40
+      rect:
+        serializedVersion: 2
+        x: 5929
+        y: 64
+        width: 175
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be5a7e010871cf10800000000000000
+      internalID: 2288242031614123700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_41
+      rect:
+        serializedVersion: 2
+        x: 6419
+        y: 75
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3df3d98e31ffea90800000000000000
+      internalID: -7282336821532164801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_42
+      rect:
+        serializedVersion: 2
+        x: 6565
+        y: 83
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b04190667cef250800000000000000
+      internalID: 5980436596247497500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_43
+      rect:
+        serializedVersion: 2
+        x: 6621
+        y: 96
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ffa670b3606e7f0800000000000000
+      internalID: -583772251100610748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_44
+      rect:
+        serializedVersion: 2
+        x: 6672
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71151bf336376030800000000000000
+      internalID: 3487816033305432442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_45
+      rect:
+        serializedVersion: 2
+        x: 6697
+        y: 75
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31411471eb881dd0800000000000000
+      internalID: -2515106591455231684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_46
+      rect:
+        serializedVersion: 2
+        x: 6952
+        y: 113
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9439a930a6ee9b0800000000000000
+      internalID: -5048981568524957214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_47
+      rect:
+        serializedVersion: 2
+        x: 6953
+        y: 87
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982f74381e764dfb0800000000000000
+      internalID: -4623956699134823799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_48
+      rect:
+        serializedVersion: 2
+        x: 7094
+        y: 110
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2405c2b61801a60800000000000000
+      internalID: 7642750864952672945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_49
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 92
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f90191d17bd4bf0800000000000000
+      internalID: -338413061380464892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_50
+      rect:
+        serializedVersion: 2
+        x: 7107
+        y: 90
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ef42ee5f6327fd0800000000000000
+      internalID: -2345752026016317805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_51
+      rect:
+        serializedVersion: 2
+        x: 6473
+        y: 66
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392faae19f9cc84c0800000000000000
+      internalID: -4283827073737624941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_52
+      rect:
+        serializedVersion: 2
+        x: 6505
+        y: 64
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c5f522253f3d650800000000000000
+      internalID: 6256611841437293701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_53
+      rect:
+        serializedVersion: 2
+        x: 6551
+        y: 65
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800bdb446fa071990800000000000000
+      internalID: -7415446208610717688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_54
+      rect:
+        serializedVersion: 2
+        x: 6572
+        y: 69
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb39ff20393f6dd00800000000000000
+      internalID: 997252180245189567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_55
+      rect:
+        serializedVersion: 2
+        x: 6723
+        y: 65
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7643e15fffda49e0800000000000000
+      internalID: -1636249226912250246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_56
+      rect:
+        serializedVersion: 2
+        x: 6764
+        y: 64
+        width: 45
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a4a221144eb1de0800000000000000
+      internalID: -1361243494220674470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_57
+      rect:
+        serializedVersion: 2
+        x: 6813
+        y: 66
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a7807bbe6355450800000000000000
+      internalID: 6076823658222352938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_58
+      rect:
+        serializedVersion: 2
+        x: 6835
+        y: 71
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216e6d1f425af8c70800000000000000
+      internalID: 8975574160467486226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_59
+      rect:
+        serializedVersion: 2
+        x: 7002
+        y: 64
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b5dba4aa06cee00800000000000000
+      internalID: 1075340695549336342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_60
+      rect:
+        serializedVersion: 2
+        x: 7031
+        y: 64
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27b65e7976427710800000000000000
+      internalID: 1689490297841956655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_61
+      rect:
+        serializedVersion: 2
+        x: 7076
+        y: 68
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebdfe8604b0820770800000000000000
+      internalID: 8575558151159348670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalfist_62
+      rect:
+        serializedVersion: 2
+        x: 7092
+        y: 74
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9188377c293080030800000000000000
+      internalID: 3461020242580572185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
