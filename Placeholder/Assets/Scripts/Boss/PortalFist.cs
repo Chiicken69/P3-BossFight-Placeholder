@@ -33,7 +33,7 @@ public class PortalFist : MonoBehaviour
     {
         if (Input.GetAxisRaw("Fire1") == 1 && timer1 <= 0)
         {
-            SpawnPortalFist(50);
+            SpawnPortalFist();
             timer1 = timerReset;
         }
     }
@@ -41,7 +41,7 @@ public class PortalFist : MonoBehaviour
     {
         timer1 -= Time.deltaTime;
     }
-    public void SpawnPortalFist(float P)
+    public void SpawnPortalFist()
     {
         AudioManager.Instance.PlaySFXArrayRandom("PortalSound");
         Vector3 _target = CalculatePortalPos();
