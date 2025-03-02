@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DDU_P3_Oval_Office_0: 7338367102977246948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

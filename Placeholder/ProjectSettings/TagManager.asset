@@ -42,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3406170143
+    locked: 0
   - name: GunTrail
     uniqueID: 3419186373
     locked: 0
