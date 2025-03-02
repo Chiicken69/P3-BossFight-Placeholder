@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7369807134548452493}
   - component: {fileID: 1837426182847306214}
+  - component: {fileID: 7827527697326870710}
   m_Layer: 0
   m_Name: JohnSaveManagerObjectThing
-  m_TagString: Untagged
+  m_TagString: SDM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,3 +55,17 @@ MonoBehaviour:
   sceneIndex: 0
   PlayerAttackScript: {fileID: 0}
   healthSystem: {fileID: 0}
+--- !u!114 &7827527697326870710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127712531821656400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c315f6e6f66e34e9d39f8f31ec2916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeScene: 0
+  _saveDataToQuickFileOnLoad: 0
