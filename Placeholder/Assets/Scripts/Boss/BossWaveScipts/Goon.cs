@@ -26,6 +26,7 @@ public class Goon : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 9);
         Physics2D.IgnoreLayerCollision(7, 6);
         Physics2D.IgnoreLayerCollision(7, 3);
+     
 
         _goonRB = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");

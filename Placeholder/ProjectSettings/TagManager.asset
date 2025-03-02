@@ -7,7 +7,7 @@ TagManager:
   - PortalFist
   - Triggerbox
   - Boss
-  - SDM
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -42,11 +42,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3406170143
+    locked: 0
   - name: GunTrail
     uniqueID: 3419186373
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Gun
+    uniqueID: 1370397373
     locked: 0
   - name: Warning
     uniqueID: 1017731189

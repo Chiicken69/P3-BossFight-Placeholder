@@ -51,17 +51,21 @@ public class PlayerAttack : MonoBehaviour
     public UnityEngine.Color lineColor = UnityEngine.Color.gray;
     void Start()
     {
-
+        AudioManager.Instance.PlayMusic("bossSangLoop");
+       
         _uiAmmo = GameObject.Find("UI Ammo");
         animator = _uiAmmo.GetComponent<Animator>();
         _player = this.gameObject;
         gunLine = GetComponent<LineRenderer>();
         gunLine.SetWidth(0.2f, 0.2f);
         Physics2D.IgnoreLayerCollision(2, 10);
+        Physics2D.IgnoreLayerCollision(3, 2);
+        Physics2D.IgnoreLayerCollision(9, 3);
     }
     void Update()
     {
-      FireShot();
+        Physics2D.IgnoreLayerCollision(8, 3);
+        FireShot();
         Reload();
         AmmoUI(_currentAmmoLoaded);
       _timer -= Time.deltaTime;

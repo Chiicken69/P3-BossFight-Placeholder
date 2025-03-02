@@ -44,6 +44,8 @@ public class SpawnWaveAttack : MonoBehaviour
     void Update()
     {
         _enemyDirections = new Direction();  // Initialize Direction instance
+
+        /*
         if (Input.GetKeyDown(KeyCode.L))
         {
             SpawnWave(spawnEnemyAmmount, _enemyDirections.East, SpeedAmmount); // Pass the East vector to spawn enemies from the right
@@ -60,6 +62,7 @@ public class SpawnWaveAttack : MonoBehaviour
         {
             SpawnWave(spawnEnemyAmmount, _enemyDirections.South, SpeedAmmount); // Pass the East vector to spawn enemies from the right
         }
+        */
     }
 
     public void SpawnWave(int Amount, Vector2 Direction, float speed)
