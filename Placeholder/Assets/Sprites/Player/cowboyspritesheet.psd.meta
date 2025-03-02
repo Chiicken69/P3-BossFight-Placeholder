@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cowboyspritesheet_0: 3920121389672063531
+      cowboyspritesheet_1: 7183888758010159957
+      cowboyspritesheet_2: -8194133321517490624
+      cowboyspritesheet_3: -7109557713293647110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

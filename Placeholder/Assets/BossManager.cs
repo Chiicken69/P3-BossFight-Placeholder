@@ -15,6 +15,8 @@ public class BossManager : MonoBehaviour
 
     private float _portalFistTimer = 0f;
 
+    public Component PortalFist;
+
     //fireball
 
 
@@ -24,6 +26,7 @@ public class BossManager : MonoBehaviour
     private void Start()
     {
         maxBossHealth = GetComponent<HealthGeneral>()._maxHealth;
+        PortalFist = GetComponent<PortalFist>();
     }
 
     void Update()
@@ -45,14 +48,19 @@ public class BossManager : MonoBehaviour
 
             if (_portalFistTimer > 2)
             {
-                GetComponent<PortalFist>().SpawnPortalFist();
 
+                GetComponent<PortalFist>().SpawnPortalFist();
                 _portalFistTimer = 0;
 
             }
         }
         else if (bossHealth > (maxBossHealth) * (1 / 3))
         {
+            GetComponent<PortalFist>().enabled = false;
+            GetComponent<BossFireAttack>().enabled = true;
+            GetComponent<BossMovement>().enabled = true;
+            GetComponent<SpawnWaveAttack>().enabled = false;
+
 
         }
         else if (bossHealth > 0)
