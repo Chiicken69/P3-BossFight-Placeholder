@@ -1,16 +1,36 @@
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public VideoPlayer deathVideo; 
+    public GameObject deathScreen; 
+
     void Start()
     {
-        
+        deathScreen.SetActive(false); 
+        deathVideo.loopPointReached += OnVideoEnd; 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.tag == ("Enemy"))
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        deathScreen.SetActive(true); 
+        deathVideo.Play(); 
+        Time.timeScale = 0f;
+    }
+
+    void OnVideoEnd(VideoPlayer vp)
+    {
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 }
