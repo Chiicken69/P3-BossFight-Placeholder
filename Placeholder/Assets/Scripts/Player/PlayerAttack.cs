@@ -52,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PlayMusic("bossSangLoop");
-        AudioManager.loop;
+       
         _uiAmmo = GameObject.Find("UI Ammo");
         animator = _uiAmmo.GetComponent<Animator>();
         _player = this.gameObject;
