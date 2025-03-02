@@ -1984,6 +1984,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 838184182574151133, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1071891380913949826, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -2027,6 +2031,26 @@ PrefabInstance:
     - target: {fileID: 4304920487035174747, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b27345bb9a59b34aa9703e2d1e4f678, type: 3}
+    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: musicSounds.Array.data[0].name
+      value: bossSangMedIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: musicSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: edb1b304211043547bed23dbd3437c4e, type: 3}
+    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: musicSounds.Array.data[1].name
+      value: bossSangLoop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
