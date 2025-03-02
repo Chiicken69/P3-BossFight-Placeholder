@@ -611,6 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theBossShouldAttack: 0
   player: {fileID: 962226822}
+  _attackCooldown: 0
   fireBall: {fileID: 5046289671390713980, guid: 7a8837a324646ef42b009b8e3cfcd0a6, type: 3}
 --- !u!1 &506480915
 GameObject:
@@ -1166,6 +1167,7 @@ MonoBehaviour:
   _reloadTimer: 2
   _partikalObject: {fileID: 5721940541320000196, guid: a5e26518d0cc12e4084d6566abb9fbda, type: 3}
   _hitWallPartikalObject: {fileID: 7496593291163084576, guid: f282492a5a9e3174985a6b1bf333d177, type: 3}
+  _currentAmmoLoaded: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 904
@@ -1435,6 +1437,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4304920487035174747, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933689486298884112, guid: 0b6066d950780aa4e923900e1ae6ce6f, type: 3}
+      propertyPath: musicSounds.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
