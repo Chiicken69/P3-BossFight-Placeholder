@@ -14,13 +14,16 @@ public class SaveDataManager : MonoBehaviour
     private string quickFullSavePath = @"";
     public SaveData saveDataObject;
 
-    [Header("References")]
+    [Header("References (Should get auto-loaded, if they dont we got an issue)")]
+   
+    [Tooltip("Finds object with 'Player' tag")]
     [SerializeField] private GameObject player;
     [SerializeField] private int sceneIndex;
 
     //Player scripts with data, get from player object.
-    private PlayerAttack PlayerAttackScript;
-    private HealthSystem healthSystem;
+
+    [SerializeField] private PlayerAttack PlayerAttackScript;
+    [SerializeField] private HealthSystem healthSystem;
 
 
     private static GameObject staticSDMobject;
@@ -254,6 +257,7 @@ public class SaveDataManager : MonoBehaviour
     private void GetReferenceScripts()
     {
         //This is the scripts data is pulled from / pushed to.
+        player = GameObject.FindGameObjectWithTag("Player");
         PlayerAttackScript = player.GetComponent<PlayerAttack>();
         healthSystem = player.GetComponent<HealthSystem>();
     }
