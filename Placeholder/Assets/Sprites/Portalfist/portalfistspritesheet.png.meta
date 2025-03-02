@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a89c4ad5097a08f4f9ef4c944e9bd33d
+guid: 3486e5412cf0ec849a58d84d788f5e3e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -271,19 +271,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1697,7 +1684,70 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portalfistspritesheet_0: -6437557139684720186
+      portalfistspritesheet_1: -4472488230465339014
+      portalfistspritesheet_10: -8082657824491578301
+      portalfistspritesheet_11: 5349292476860316384
+      portalfistspritesheet_12: 8557247483682154436
+      portalfistspritesheet_13: -1255095070492903246
+      portalfistspritesheet_14: 4004503848078430373
+      portalfistspritesheet_15: 5841246177055840922
+      portalfistspritesheet_16: -2057571017359748620
+      portalfistspritesheet_17: 5866155059635964901
+      portalfistspritesheet_18: -4651506437609832098
+      portalfistspritesheet_19: 6365057846383983775
+      portalfistspritesheet_2: 1114076847621284011
+      portalfistspritesheet_20: 1653892993822499402
+      portalfistspritesheet_21: -6389850229754451567
+      portalfistspritesheet_22: -4795940326590209634
+      portalfistspritesheet_23: -5789956181179536370
+      portalfistspritesheet_24: 2481132904700184283
+      portalfistspritesheet_25: 1944038617916483302
+      portalfistspritesheet_26: -6832525582138308904
+      portalfistspritesheet_27: 4111368110732249047
+      portalfistspritesheet_28: -5510056856258171031
+      portalfistspritesheet_29: -2060292756069174312
+      portalfistspritesheet_3: -8256061366276946235
+      portalfistspritesheet_30: 4269296928510363412
+      portalfistspritesheet_31: -7762894807803798511
+      portalfistspritesheet_32: 7990779022331091462
+      portalfistspritesheet_33: 6452094430670881075
+      portalfistspritesheet_34: 7034845738854715567
+      portalfistspritesheet_35: 8050631310825088694
+      portalfistspritesheet_36: 3681968185662167885
+      portalfistspritesheet_37: -8366000794474056023
+      portalfistspritesheet_38: 2394173833128105952
+      portalfistspritesheet_39: -6750806597954128261
+      portalfistspritesheet_4: 7811848703821407822
+      portalfistspritesheet_40: 1837346001858391039
+      portalfistspritesheet_41: -4230873641812099397
+      portalfistspritesheet_42: -2230526515736992581
+      portalfistspritesheet_43: -3768492622063793142
+      portalfistspritesheet_44: 7243218958283373685
+      portalfistspritesheet_45: 4079733600208199603
+      portalfistspritesheet_46: -7001689799994041905
+      portalfistspritesheet_47: -3853082610546223763
+      portalfistspritesheet_48: 1822081099058897280
+      portalfistspritesheet_49: 1601087636508970049
+      portalfistspritesheet_5: -1319797151261022255
+      portalfistspritesheet_50: 5016934466048687166
+      portalfistspritesheet_51: 8536566556097053756
+      portalfistspritesheet_52: 8665737057527555213
+      portalfistspritesheet_53: 7953634006002903744
+      portalfistspritesheet_54: 6369965965957108090
+      portalfistspritesheet_55: -9143874566977782642
+      portalfistspritesheet_56: 2989537887855264048
+      portalfistspritesheet_57: 7160677896279742214
+      portalfistspritesheet_58: 2817732872173055389
+      portalfistspritesheet_59: 8199219227289628798
+      portalfistspritesheet_6: -1460064249430430610
+      portalfistspritesheet_60: -9151730822399758634
+      portalfistspritesheet_61: 6214851529252625775
+      portalfistspritesheet_62: 454579946710194221
+      portalfistspritesheet_7: 8293272462456947246
+      portalfistspritesheet_8: 3438843492116179119
+      portalfistspritesheet_9: 1847973354218820115
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

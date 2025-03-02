@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af0beb490d1d84440a86715c9c1fc22d
+guid: 20dc8856d0e32c346bfe734d69e2e9d6
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,19 +105,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -127,7 +114,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 430
+        width: 860
         height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,10 +122,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dacfcbe356e957f4bb8eb9cc3eacd787
-      internalID: -6682184
+      spriteID: b2260db52a1176630800000000000000
+      internalID: 3920121389672063531
       vertices: []
       indices: 
       edges: []
@@ -147,20 +134,20 @@ TextureImporter:
       name: cowboyspritesheet_1
       rect:
         serializedVersion: 2
-        x: 430
-        y: 0
-        width: 430
-        height: 538
+        x: 859
+        y: 6
+        width: 432
+        height: 532
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e37df353dc936594aaf394bdd2ebd0a8
-      internalID: 23402668
+      spriteID: 5532e1773cc42b360800000000000000
+      internalID: 7183888758010159957
       vertices: []
       indices: 
       edges: []
@@ -169,20 +156,20 @@ TextureImporter:
       name: cowboyspritesheet_2
       rect:
         serializedVersion: 2
-        x: 860
-        y: 0
-        width: 430
-        height: 538
+        x: 1290
+        y: 1
+        width: 432
+        height: 537
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eba03d88ff4c81243919d17b9d14a67e
-      internalID: -202157497
+      spriteID: 04e12c09827984e80800000000000000
+      internalID: -8194133321517490624
       vertices: []
       indices: 
       edges: []
@@ -191,42 +178,20 @@ TextureImporter:
       name: cowboyspritesheet_3
       rect:
         serializedVersion: 2
-        x: 1290
-        y: 0
-        width: 430
-        height: 538
+        x: 1721
+        y: 6
+        width: 429
+        height: 532
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e85e8b0bfeeac264eac901f6e3d66c9d
-      internalID: -1496331119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cowboyspritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 0
-        width: 430
-        height: 538
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a8fa54e50f934d40bc13aae569d2e88
-      internalID: 2009833605
+      spriteID: af26ef48de6c55d90800000000000000
+      internalID: -7109557713293647110
       vertices: []
       indices: 
       edges: []
@@ -235,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c9f5944e4b0aa3b4b8450e6c36c23be9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -245,11 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cowboyspritesheet_0: -6682184
-      cowboyspritesheet_1: 23402668
-      cowboyspritesheet_2: -202157497
-      cowboyspritesheet_3: -1496331119
-      cowboyspritesheet_4: 2009833605
+      cowboyspritesheet_0: 3920121389672063531
+      cowboyspritesheet_1: 7183888758010159957
+      cowboyspritesheet_2: -8194133321517490624
+      cowboyspritesheet_3: -7109557713293647110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

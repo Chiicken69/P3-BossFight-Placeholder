@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b5d6feadcb2b7448ad8ba0ba7d2e29a
+guid: c1a6aa8d69f6c9b4f9045e8c3b39f7ed
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -271,19 +271,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1697,7 +1684,70 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portalfist_0: -4679885111235207576
+      portalfist_1: 5190018360732557665
+      portalfist_10: -6693477623363973625
+      portalfist_11: 2476755442484021046
+      portalfist_12: -5970428360457407803
+      portalfist_13: -6308502257077311096
+      portalfist_14: -1672629441738839893
+      portalfist_15: -6600489038718649975
+      portalfist_16: -9001713153591053299
+      portalfist_17: -6165743893500607382
+      portalfist_18: 1122907891306734679
+      portalfist_19: -409104278136292489
+      portalfist_2: -8255564206888269283
+      portalfist_20: 7350591707680858431
+      portalfist_21: 2847361549783772735
+      portalfist_22: 4017435443236313053
+      portalfist_23: 6775842799800726376
+      portalfist_24: 7217227446621520297
+      portalfist_25: -1193189508797980726
+      portalfist_26: 4492270939056790761
+      portalfist_27: -7189262436201929244
+      portalfist_28: -5660991031806706265
+      portalfist_29: -4002687025467870160
+      portalfist_3: 1975952340314673641
+      portalfist_30: -3040439165623419843
+      portalfist_31: -5038066481334509100
+      portalfist_32: 4341988508043312101
+      portalfist_33: 9105299374795898881
+      portalfist_34: -4682801071386605857
+      portalfist_35: 8474531604636733905
+      portalfist_36: -512170447944702209
+      portalfist_37: 7561772097381842459
+      portalfist_38: 5231251542317283575
+      portalfist_39: -2079261948882291418
+      portalfist_4: 3082520014554226634
+      portalfist_40: 2288242031614123700
+      portalfist_41: -7282336821532164801
+      portalfist_42: 5980436596247497500
+      portalfist_43: -583772251100610748
+      portalfist_44: 3487816033305432442
+      portalfist_45: -2515106591455231684
+      portalfist_46: -5048981568524957214
+      portalfist_47: -4623956699134823799
+      portalfist_48: 7642750864952672945
+      portalfist_49: -338413061380464892
+      portalfist_5: -7439392588735226756
+      portalfist_50: -2345752026016317805
+      portalfist_51: -4283827073737624941
+      portalfist_52: 6256611841437293701
+      portalfist_53: -7415446208610717688
+      portalfist_54: 997252180245189567
+      portalfist_55: -1636249226912250246
+      portalfist_56: -1361243494220674470
+      portalfist_57: 6076823658222352938
+      portalfist_58: 8975574160467486226
+      portalfist_59: 1075340695549336342
+      portalfist_6: 5054434007908715770
+      portalfist_60: 1689490297841956655
+      portalfist_61: 8575558151159348670
+      portalfist_62: 3461020242580572185
+      portalfist_7: -3059206925338487598
+      portalfist_8: -3858232612063410583
+      portalfist_9: -6085245091532379618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
