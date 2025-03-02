@@ -7,7 +7,8 @@ public class BossFireAttack : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
-    private float _attackCooldown;
+
+    [SerializeField] private float _attackCooldown;
 
     [SerializeField] private GameObject fireBall;
 
@@ -47,4 +48,5 @@ public class BossFireAttack : MonoBehaviour
         }
 
     }
+
 }

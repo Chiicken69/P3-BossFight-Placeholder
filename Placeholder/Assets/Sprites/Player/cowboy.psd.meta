@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6030853c480c06c4b8e66eecbff72131
+guid: 054b8f2ed7bce044382f19d9afab0c94
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cowboy_0: 5308448175360178355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

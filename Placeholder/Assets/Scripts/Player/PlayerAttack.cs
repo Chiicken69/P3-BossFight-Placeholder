@@ -1,6 +1,6 @@
 
 using System.Collections;
-
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -38,7 +38,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject _partikalObject;
     [SerializeField] private GameObject _hitWallPartikalObject;
 
-    private int _currentAmmoLoaded;
+    [DoNotSerialize]
+    public int _currentAmmoLoaded;
     private int _maxAmmoCapacity = 6;
 
     private Animator animator;
@@ -51,13 +52,15 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PlayMusic("bossSangLoop");
-        AudioManager.loop;
+       
         _uiAmmo = GameObject.Find("UI Ammo");
         animator = _uiAmmo.GetComponent<Animator>();
         _player = this.gameObject;
         gunLine = GetComponent<LineRenderer>();
         gunLine.SetWidth(0.2f, 0.2f);
         Physics2D.IgnoreLayerCollision(2, 10);
+        Physics2D.IgnoreLayerCollision(3, 2);
+        Physics2D.IgnoreLayerCollision(9, 3);
     }
     void Update()
     {

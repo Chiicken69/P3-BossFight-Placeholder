@@ -441,6 +441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d88cb5180f7d2241a5e5e9876ecf5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVideo: {fileID: 2030498390}
+  deathScreen: {fileID: 667617286}
 --- !u!114 &497886915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +655,7 @@ MonoBehaviour:
   _reloadTimer: 2
   _partikalObject: {fileID: 5721940541320000196, guid: a5e26518d0cc12e4084d6566abb9fbda, type: 3}
   _hitWallPartikalObject: {fileID: 7496593291163084576, guid: f282492a5a9e3174985a6b1bf333d177, type: 3}
+  _currentAmmoLoaded: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 904

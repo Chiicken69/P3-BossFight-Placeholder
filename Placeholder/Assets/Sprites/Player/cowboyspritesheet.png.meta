@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 070330197f73d8f4a9567b764ce067d2
+guid: 20dc8856d0e32c346bfe734d69e2e9d6
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cowboyspritesheet_0: 3920121389672063531
+      cowboyspritesheet_1: 7183888758010159957
+      cowboyspritesheet_2: -8194133321517490624
+      cowboyspritesheet_3: -7109557713293647110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
