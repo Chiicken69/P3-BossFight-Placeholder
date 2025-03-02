@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class SaveDataManager : MonoBehaviour
 {
@@ -13,13 +14,17 @@ public class SaveDataManager : MonoBehaviour
     private string quickFullSavePath = @"";
     public SaveData saveDataObject;
 
-    [Header("References")]
+    [Header("References (Should get auto-loaded, if they dont we got an issue)")]
+   
+    [Tooltip("Finds object with 'Player' tag")]
     [SerializeField] private GameObject player;
     [SerializeField] private int sceneIndex;
 
     //Player scripts with data, get from player object.
-    private PlayerAttack PlayerAttackScript;
-    private HealthSystem healthSystem;
+
+    [SerializeField] private PlayerAttack PlayerAttackScript;
+    [SerializeField] private HealthSystem healthSystem;
+
 
     private static GameObject staticSDMobject;
 
@@ -48,34 +53,6 @@ public class SaveDataManager : MonoBehaviour
         quickFullSavePath = Path.Combine(saveFolderPath, quickSaveFileName);
         Debug.Log("Quick respawn data path: " + quickFullSavePath);
 
-        //Load correct save file
-        //There is a difference between if a player just died / is reloading from a save between sessions.
-        try
-        {
-            
-            if (File.Exists(quickFullSavePath)) //Prøver først at loade fra quick save, ift. f.eks. hvis man bare går ind på en ny scene
-            {
-                LoadSaveDataFromFile(quickFullSavePath);
-                Debug.Log("Loaded save data from quick");
-            } else if (File.Exists(permFullSavePath)) //Er der ingen quick save, er det fordi man måske fortsætter et spil fra en forrig session
-            {
-                LoadSaveDataFromFile(permFullSavePath);
-                Debug.Log("Loaded save data from perm");
-            } else                                      //Ellers starter man et nyt spil
-            {
-                //Hvilken fil skal skabes her?
-                //Quick?
-                //Perm skal vel kun laves ved "perm save points" osv så?
-                Debug.Log("No save data file found on loading. Creating quick save file.");
-                CreateSaveFile(quickFullSavePath);
-                
-            }
-        }
-        catch (IOException e)
-        {
-            Debug.Log("Error when loading save data." + e.ToString());
-            throw;
-        }
 
 
         
@@ -84,8 +61,39 @@ public class SaveDataManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerAttackScript = player.GetComponent<PlayerAttack>();
-        
+        GetReferenceScripts();
+
+        //Load correct save file
+        //There is a difference between if a player just died / is reloading from a save between sessions.
+        try
+        {
+
+            if (File.Exists(quickFullSavePath)) //Prøver først at loade fra quick save, ift. f.eks. hvis man bare går ind på en ny scene
+            {
+                LoadSaveDataFromFile(quickFullSavePath);
+                Debug.Log("Loaded save data from quick");
+            }
+            else if (File.Exists(permFullSavePath)) //Er der ingen quick save, er det fordi man måske fortsætter et spil fra en forrig session
+            {
+                LoadSaveDataFromFile(permFullSavePath);
+                Debug.Log("Loaded save data from perm");
+            }
+            else                                      //Ellers starter man et nyt spil
+            {
+                //Hvilken fil skal skabes her?
+                //Quick?
+                //Perm skal vel kun laves ved "perm save points" osv så?
+                Debug.Log("No save data file found on loading. Creating quick save file.");
+                CreateSaveFile(quickFullSavePath);
+
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log("Error when loading save data." + e.ToString());
+            throw;
+        }
+
     }
 
 
@@ -101,9 +109,10 @@ public class SaveDataManager : MonoBehaviour
         [SerializeField]
         public int SceneIndex;
 
-        [SerializeField]
+        /*[SerializeField]
         public Vector2 PlayerPos;
-
+        Dont fuck with position for now, just use default pos defined in editor :>
+        */
 
 
     }
@@ -139,7 +148,8 @@ public class SaveDataManager : MonoBehaviour
         if (!File.Exists(savePath))
         {
             Debug.Log("Highscore save data file doesnt exist, attempting creation.");
-            CreateSaveFile(savePath);
+            //CreateSaveFile(savePath);
+            Debug.Log("Auto-creation of save-files disabled. Creation aborted.");
         }
         else
         {
@@ -150,6 +160,7 @@ public class SaveDataManager : MonoBehaviour
                 Debug.Log("Overwriting current save data: " + JsonUtility.ToJson(saveDataObject).ToString() + " with the following imported saves: " + readText);
                 saveDataObject = JsonUtility.FromJson<SaveData>(readText);
                 Debug.Log("Save data is now: " + JsonUtility.ToJson(saveDataObject).ToString());
+                PushLoadedData();
 
             }
             catch (IOException e)
@@ -158,18 +169,20 @@ public class SaveDataManager : MonoBehaviour
             }
         }
 
-        UpdatePlayerData();
+        
     }
     /// <summary>
     /// Function to save data from other scripts
     /// </summary>
     public void SaveDataToPermFile()
     {
+        UpdatePlayerData();
         SaveDataToFile(permFullSavePath);
     }
 
     public void SaveDataToQuickFile()
     {
+        UpdatePlayerData();
         SaveDataToFile(quickFullSavePath);
     }
 
@@ -227,18 +240,34 @@ public class SaveDataManager : MonoBehaviour
     private void UpdatePlayerData()
     {
         //Update actual information in save data object.
+        saveDataObject.PlayerHP = healthSystem._currentHealth;
+        saveDataObject.PlayerBullets = PlayerAttackScript._currentAmmoLoaded;
+        saveDataObject.SceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+    }
+
+    private void PushLoadedData()
+    {
+        //Loaded som data to save data object, now we push this to the actual game state.
+        healthSystem._currentHealth = saveDataObject.PlayerHP;
+        PlayerAttackScript._currentAmmoLoaded = saveDataObject.PlayerBullets;
+        SceneManager.LoadScene(saveDataObject.SceneIndex);
     }
 
     private void GetReferenceScripts()
     {
         //This is the scripts data is pulled from / pushed to.
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerAttackScript = player.GetComponent<PlayerAttack>();
+        healthSystem = player.GetComponent<HealthSystem>();
     }
 
 
     private void OnApplicationQuit()
     {
         //Gem og luk save data fil korrekt.
-        SaveDataToFile(permFullSavePath);
+        //NVM perm data gemmes kun ved save points
+        //SaveDataToFile(permFullSavePath);
         DeleteQuickSave();
     }
 
