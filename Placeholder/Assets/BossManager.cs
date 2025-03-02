@@ -36,7 +36,7 @@ public class BossManager : MonoBehaviour
 
         if (bossHealth > (maxBossHealth) * (2/3))
         {
-
+            print("phase1");
 
             GetComponent<BossFireAttack>().enabled = false;
             GetComponent<BossMovement>().enabled = false;
@@ -60,12 +60,12 @@ public class BossManager : MonoBehaviour
             GetComponent<BossFireAttack>().enabled = true;
             GetComponent<BossMovement>().enabled = true;
             GetComponent<SpawnWaveAttack>().enabled = false;
-
+            print("phase2");
 
         }
         else if (bossHealth > 0)
         {
-
+            print("phase3");
         }
         else
         {
