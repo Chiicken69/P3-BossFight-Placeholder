@@ -46,7 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bab3dc5969f2324b81630440cc2a778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSounds: []
+  musicSounds:
+  - name: bossSangMedIntro
+    clip: {fileID: 8300000, guid: 5b27345bb9a59b34aa9703e2d1e4f678, type: 3}
+  - name: bossSangLoop
+    clip: {fileID: 8300000, guid: edb1b304211043547bed23dbd3437c4e, type: 3}
   sfxSounds:
   - name: gunShot
     clip: {fileID: 8300000, guid: c2a448366b1eb8e4dbadb28a0459814a, type: 3}
@@ -250,7 +254,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
