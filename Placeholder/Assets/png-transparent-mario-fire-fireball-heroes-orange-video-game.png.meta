@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      png-transparent-mario-fire-fireball-heroes-orange-video-game_0: -4416929064198070180
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
