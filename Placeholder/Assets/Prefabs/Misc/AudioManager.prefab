@@ -65,12 +65,12 @@ MonoBehaviour:
   sfxSoundArray:
   - name: PortalSound
     clip:
-    - {fileID: 8300000, guid: c372ec89979d2a942b225d9a4ad4742d, type: 3}
-    - {fileID: 8300000, guid: 495ac3b67208d3146b772aa12fc8036c, type: 3}
-    - {fileID: 8300000, guid: aea68f779e3c50f4a91ede13db985f9e, type: 3}
-    - {fileID: 8300000, guid: 9e9bcc6e9969f384da0932880e6de8c6, type: 3}
-    - {fileID: 8300000, guid: 252b4f890d2949f43a6fa47d74b3440f, type: 3}
-    - {fileID: 8300000, guid: 42df078cd29c20b459056d3b5b4c0d2b, type: 3}
+    - {fileID: 8300000, guid: ecf6a88e49958aa48b5502fdb5168d04, type: 3}
+    - {fileID: 8300000, guid: 322e9d0254cf1ea409046911d19cfd93, type: 3}
+    - {fileID: 8300000, guid: 9ee57ccbb081df7498f3792f2708a85d, type: 3}
+    - {fileID: 8300000, guid: d5f01ea19026b6f4ea153fc8d83ebc9c, type: 3}
+    - {fileID: 8300000, guid: 92c7f1e94f4ccd34285a0c00886558c0, type: 3}
+    - {fileID: 8300000, guid: 8a374968c77adb54f800ef7aadbf1c59, type: 3}
   - name: GoonSpawnSound
     clip:
     - {fileID: 8300000, guid: c03de2550d1ddaf42aa54ab732e0fd45, type: 3}
@@ -252,13 +252,13 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 202
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
