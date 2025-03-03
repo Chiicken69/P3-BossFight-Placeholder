@@ -160,7 +160,6 @@ public class SaveDataManager : MonoBehaviour
                 Debug.Log("Overwriting current save data: " + JsonUtility.ToJson(saveDataObject).ToString() + " with the following imported saves: " + readText);
                 saveDataObject = JsonUtility.FromJson<SaveData>(readText);
                 Debug.Log("Save data is now: " + JsonUtility.ToJson(saveDataObject).ToString());
-                PushLoadedData();
 
             }
             catch (IOException e)
@@ -246,12 +245,16 @@ public class SaveDataManager : MonoBehaviour
 
     }
 
-    private void PushLoadedData()
+    public void PushLoadedData(bool ChangeScene)
     {
         //Loaded som data to save data object, now we push this to the actual game state.
         healthSystem._currentHealth = saveDataObject.PlayerHP;
         PlayerAttackScript._currentAmmoLoaded = saveDataObject.PlayerBullets;
-        SceneManager.LoadScene(saveDataObject.SceneIndex);
+        if(ChangeScene)
+        {
+            SceneManager.LoadScene(saveDataObject.SceneIndex);
+        }
+        
     }
 
     private void GetReferenceScripts()
