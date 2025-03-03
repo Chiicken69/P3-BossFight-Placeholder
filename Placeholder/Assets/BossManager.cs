@@ -17,11 +17,9 @@ public class BossManager : MonoBehaviour
 
     public Component PortalFist;
 
-    //fireball
+    //victory
 
-
-
-    //horde
+    public GameObject vicrory;
 
     Vector2[] spawnPositions = new Vector2[]
     {
@@ -74,7 +72,7 @@ public class BossManager : MonoBehaviour
             print("phase2");
 
         }
-        else if (bossHealth >= 0)
+        else if (bossHealth > 11)
         {
             print("phase3");
             transform.position = new Vector3(8, -4, 0);
@@ -97,8 +95,12 @@ public class BossManager : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+
             print("YOU WIN!!!");
+            vicrory.SetActive(true);
+            Time.timeScale = 0;
+            gameObject.SetActive(false);
+
         }
 
 
