@@ -274,7 +274,7 @@ MonoBehaviour:
   _moveDashSpeed: 0.25
   _dashCooldownTime: 1
   isInvincible: 0
-  _invincibleSeconds: 0
+  _invincibleSeconds: 1
   _invincibleTimer: 0
   _dashTimer: 1
 --- !u!58 &2665796473041303434
