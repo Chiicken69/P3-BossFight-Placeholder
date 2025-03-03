@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b783fac593c324eaaa6121ad6d5b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 4250808354131443626}
   hpSpriteArray:
   - {fileID: 3834487811837581622, guid: 0dd9d348920cafe48a13dff0fc1f5aa0, type: 3}
   - {fileID: 6054049712467196922, guid: 69a6e84a03615dc408e076b0678ba896, type: 3}
