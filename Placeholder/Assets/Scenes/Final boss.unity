@@ -1082,6 +1082,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 31294451275121591, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
   m_PrefabInstance: {fileID: 929333591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &706257743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706257731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b783fac593c324eaaa6121ad6d5b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpSpriteArray:
+  - {fileID: 3834487811837581622, guid: 0dd9d348920cafe48a13dff0fc1f5aa0, type: 3}
+  - {fileID: 6054049712467196922, guid: 69a6e84a03615dc408e076b0678ba896, type: 3}
+  - {fileID: 5853337739606231116, guid: 73e4bf40639740b438a9fac67824d1dd, type: 3}
+  _hpRenderer: {fileID: 1375299831}
 --- !u!1 &789343994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1417,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 31294451275121591, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 706257743}
   m_SourcePrefab: {fileID: 100100000, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
 --- !u!1 &955927266
 GameObject:
@@ -2050,7 +2070,6 @@ GameObject:
   - component: {fileID: 1375299829}
   - component: {fileID: 1375299832}
   - component: {fileID: 1375299831}
-  - component: {fileID: 1375299830}
   m_Layer: 5
   m_Name: HP Ui
   m_TagString: Untagged
@@ -2077,22 +2096,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60.433, y: -73.1661}
   m_SizeDelta: {x: 85.36, y: 119.4179}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1375299830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375299828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b783fac593c324eaaa6121ad6d5b1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpSpriteArray:
-  - {fileID: 3834487811837581622, guid: 0dd9d348920cafe48a13dff0fc1f5aa0, type: 3}
-  - {fileID: 6054049712467196922, guid: 69a6e84a03615dc408e076b0678ba896, type: 3}
-  - {fileID: 5853337739606231116, guid: 73e4bf40639740b438a9fac67824d1dd, type: 3}
 --- !u!114 &1375299831
 MonoBehaviour:
   m_ObjectHideFlags: 0

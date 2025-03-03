@@ -1,21 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class HealhChecker : MonoBehaviour
 
-{    private GameObject _player;
+{
+
     private HealthSystem _health;
     [SerializeField] private Sprite[] hpSpriteArray;
-    private GameObject hpObject;
-    private SpriteRenderer _hpRenderer;
+    //private GameObject hpObject;
+    [SerializeField] private Image _hpRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+  
+    private void Awake()
     {
-        hpObject = GameObject.Find("HP UI");
-        _player = GameObject.FindGameObjectWithTag("Player");
-        _hpRenderer = hpObject.GetComponent<SpriteRenderer>();
-        HealthSystem _health = _player.GetComponent<HealthSystem>();
+        //hpObject = GameObject.Find("HP UI");
+        //_hpRenderer = hpObject.GetComponent<SpriteRenderer>();
+        HealthSystem _health = this.GetComponent<HealthSystem>();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -23,6 +27,7 @@ public class HealhChecker : MonoBehaviour
         if (_health._currentHealth == 30)
         {
             _hpRenderer.sprite = hpSpriteArray[0];
+
         }
         if (_health._currentHealth == 20)
         {
