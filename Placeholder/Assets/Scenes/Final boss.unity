@@ -1082,6 +1082,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 31294451275121591, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
   m_PrefabInstance: {fileID: 929333591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &706257735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4250808354131443626, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
+  m_PrefabInstance: {fileID: 929333591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706257731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8d0ec7c3726ce48921fd13d7968bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789343994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1356,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 440195437542212580, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 706257735}
+    - target: {fileID: 440195437542212580, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
+      propertyPath: _hpRenderer
+      value: 
+      objectReference: {fileID: 1375299831}
     - target: {fileID: 730422185339429163, guid: 6843f5fc0adff414a813fe004cd3caee, type: 3}
       propertyPath: deathVideo
       value: 
@@ -2050,7 +2069,6 @@ GameObject:
   - component: {fileID: 1375299829}
   - component: {fileID: 1375299832}
   - component: {fileID: 1375299831}
-  - component: {fileID: 1375299830}
   m_Layer: 5
   m_Name: HP Ui
   m_TagString: Untagged
@@ -2077,22 +2095,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60.433, y: -73.1661}
   m_SizeDelta: {x: 85.36, y: 119.4179}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1375299830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375299828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b783fac593c324eaaa6121ad6d5b1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpSpriteArray:
-  - {fileID: 3834487811837581622, guid: 0dd9d348920cafe48a13dff0fc1f5aa0, type: 3}
-  - {fileID: 6054049712467196922, guid: 69a6e84a03615dc408e076b0678ba896, type: 3}
-  - {fileID: 5853337739606231116, guid: 73e4bf40639740b438a9fac67824d1dd, type: 3}
 --- !u!114 &1375299831
 MonoBehaviour:
   m_ObjectHideFlags: 0
