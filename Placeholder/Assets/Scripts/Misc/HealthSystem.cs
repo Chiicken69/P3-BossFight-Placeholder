@@ -59,8 +59,8 @@ public class HealthSystem : MonoBehaviour
     {
         if (collision.CompareTag("PortalFist"))
         {
-            TakeDamage(1);
-            Debug.Log("Player took" + 1 + " Damage, from portal fist");
+            TakeDamage(10);
+            Debug.Log("Player took" + 10 + " Damage, from portal fist");
         }
     }
 }
