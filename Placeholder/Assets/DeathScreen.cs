@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 public class DeathScreen : MonoBehaviour
 {
     public VideoPlayer deathVideo; 
-    public GameObject deathScreen; 
+    public GameObject deathScreen;
+
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
 
     void Start()
     {
@@ -33,6 +38,6 @@ public class DeathScreen : MonoBehaviour
     void OnVideoEnd(VideoPlayer vp)
     {
         Time.timeScale = 1f; 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
