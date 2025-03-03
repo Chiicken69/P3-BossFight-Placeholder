@@ -6,7 +6,7 @@ public class HealhChecker : MonoBehaviour
 
 {
 
-    private HealthSystem _health;
+    [SerializeField] private HealthSystem _health;
     [SerializeField] private Sprite[] hpSpriteArray;
     //private GameObject hpObject;
     [SerializeField] private Image _hpRenderer;
@@ -17,7 +17,7 @@ public class HealhChecker : MonoBehaviour
     {
         //hpObject = GameObject.Find("HP UI");
         //_hpRenderer = hpObject.GetComponent<SpriteRenderer>();
-        HealthSystem _health = this.GetComponent<HealthSystem>();
+        //HealthSystem _health = this.GetComponent<HealthSystem>();
     }
 
 

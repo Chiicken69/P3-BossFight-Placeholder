@@ -59,7 +59,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (collision.CompareTag("PortalFist"))
         {
-            TakeDamage(10);
+            TakeDamage(5);
             Debug.Log("Player took" + 10 + " Damage, from portal fist");
         }
     }
